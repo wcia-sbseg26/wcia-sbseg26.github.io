@@ -49,10 +49,14 @@
   "closing": {
     "eyebrow": "Vídeo",
     "title": "Vídeo de encerramento do WCIA 2026",
-    "text": "Uma retrospectiva de pouco mais de um minuto e meio da primeira edição: a abertura, as três sessões, os números do processo de avaliação e o encerramento.",
-    "version": "Primeira versão, publicada em {date}.",
+    "text": "Uma retrospectiva da primeira edição: a abertura, as três sessões, os números do processo de avaliação e o encerramento.",
+    "play": "Assistir ao vídeo",
+    "privacy": "O vídeo só é carregado do YouTube quando você toca em assistir.",
+    "watch": "Assistir no YouTube",
+    "watchHost": "youtu.be",
+    "version": "Versão {n}, publicada em {date}. A primeira versão continua disponível para download, hospedada neste site.",
     "meta": "{duration} · MP4 · {size}",
-    "download": "Baixar o vídeo",
+    "download": "Baixar a primeira versão",
     "fallback": "O seu navegador não reproduz vídeo em HTML5. Use o link de download abaixo para assistir ao vídeo."
   },
   "gallery": {
@@ -97,6 +101,7 @@
     "continued": "continuação",
     "count": "{n} trabalhos",
     "opening": "Abertura do WCIA",
+    "openingSlides": "Slides da abertura",
     "break": "Intervalo",
     "closing": "Encerramento e premiação de Melhor Artigo",
     "fullTag": "Completo",
@@ -195,7 +200,7 @@
     "text": "O WCIA terá um template de slides próprio, que será sugerido às pessoas autoras dos trabalhos aceitos. O template poderá ser copiado, modificado e usado livremente.",
     "soon": "Em breve. O link será publicado aqui assim que o template estiver disponível.",
     "cta": "Abrir o template de slides",
-    "url": ""
+    "url": "https://docs.google.com/presentation/d/1LZpV-aC-2JZXVLloe3hvkbGZ6fPSa1ZO/edit?usp=sharing&rtpof=true&sd=true"
   },
   "timer": {
     "eyebrow": "Ferramenta",

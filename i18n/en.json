@@ -49,10 +49,14 @@
   "closing": {
     "eyebrow": "Video",
     "title": "WCIA 2026 closing video",
-    "text": "A look back at the first edition in a little over a minute and a half: the opening, the three sessions, the numbers behind the review process and the close.",
-    "version": "First version, published on {date}.",
+    "text": "A look back at the first edition: the opening, the three sessions, the numbers behind the review process and the close.",
+    "play": "Play the video",
+    "privacy": "The video is only loaded from YouTube once you press play.",
+    "watch": "Watch on YouTube",
+    "watchHost": "youtu.be",
+    "version": "Version {n}, published on {date}. The first version is still available to download, hosted on this site.",
     "meta": "{duration} · MP4 · {size}",
-    "download": "Download the video",
+    "download": "Download the first version",
     "fallback": "Your browser cannot play HTML5 video. Use the download link below to watch the video."
   },
   "gallery": {
@@ -97,6 +101,7 @@
     "continued": "continued",
     "count": "{n} papers",
     "opening": "WCIA opening",
+    "openingSlides": "Opening slides",
     "break": "Break",
     "closing": "Closing and Best Paper award",
     "fullTag": "Full",

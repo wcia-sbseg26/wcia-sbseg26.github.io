@@ -22,7 +22,8 @@
       "time": "09:00–10:30",
       "items": [
         {
-          "kind": "opening"
+          "kind": "opening",
+          "slidesUrl": "https://docs.google.com/presentation/d/1b3tNVK949V3XyI9TUrkQsi4hj1zwGJfQ/edit?usp=sharing&rtpof=true&sd=true"
         },
         {
           "kind": "session",

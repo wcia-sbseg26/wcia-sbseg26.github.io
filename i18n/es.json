@@ -49,10 +49,14 @@
   "closing": {
     "eyebrow": "Video",
     "title": "Video de cierre del WCIA 2026",
-    "text": "Una retrospectiva de poco más de un minuto y medio de la primera edición: la apertura, las tres sesiones, los números del proceso de evaluación y el cierre.",
-    "version": "Primera versión, publicada el {date}.",
+    "text": "Una retrospectiva de la primera edición: la apertura, las tres sesiones, los números del proceso de evaluación y el cierre.",
+    "play": "Ver el video",
+    "privacy": "El video solo se carga desde YouTube cuando usted toca reproducir.",
+    "watch": "Ver en YouTube",
+    "watchHost": "youtu.be",
+    "version": "Versión {n}, publicada el {date}. La primera versión sigue disponible para descargar, alojada en este sitio.",
     "meta": "{duration} · MP4 · {size}",
-    "download": "Descargar el video",
+    "download": "Descargar la primera versión",
     "fallback": "Su navegador no reproduce video en HTML5. Use el enlace de descarga de abajo para ver el video."
   },
   "gallery": {
@@ -97,6 +101,7 @@
     "continued": "continuación",
     "count": "{n} trabajos",
     "opening": "Apertura del WCIA",
+    "openingSlides": "Diapositivas de la apertura",
     "break": "Intervalo",
     "closing": "Cierre y premiación al Mejor Artículo",
     "fullTag": "Completo",

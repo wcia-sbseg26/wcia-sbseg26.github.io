@@ -142,20 +142,37 @@ aceitos, e a seção diz isso em nota.
 
 ### Galeria e vídeos
 
-`data/gallery.json` tem duas partes. A primeira é o vídeo de encerramento:
+`data/gallery.json` tem duas partes. A primeira é o vídeo de encerramento, hoje
+na segunda versão, publicada no YouTube:
 
 ```json
 "closing": {
-  "src": "video/wcia2026_encerramento.mp4",
+  "youtubeId": "lTh1qFZY0Sc",
+  "url": "https://youtu.be/lTh1qFZY0Sc",
+  "title": "WCIA 2026 | O Primeiro Workshop Brasileiro de Cibersegurança em IA",
   "poster": "assets/fotos/encerramento-poster.jpg",
-  "duration": 103, "bytes": 26849059,
-  "version": 1, "published": "2026-09-09"
+  "w": 640, "h": 360,
+  "version": 2, "published": "2026-09-09",
+  "previous": {
+    "src": "video/wcia2026_encerramento.mp4",
+    "duration": 103, "bytes": 26849059, "version": 1
+  }
 }
 ```
 
-A duração e o tamanho alimentam o rótulo do botão de download, e `published`
-alimenta o aviso de versão. Ao publicar uma versão nova do vídeo, troque o
-arquivo, atualize `bytes`, `duration`, `published` e incremente `version`.
+Com `youtubeId` preenchido, a seção mostra uma capa servida por este site e só
+carrega o player do YouTube depois que a pessoa toca em assistir. Sem
+`youtubeId`, o mesmo bloco cai para um `<video>` local, usando `src` e `poster`.
+
+`previous` é a versão anterior, ainda hospedada aqui: `duration` e `bytes`
+alimentam o rótulo do botão de download, e existir uma cópia própria significa
+que o vídeo não depende de o YouTube seguir no ar. Ao publicar uma versão nova,
+incremente `version`, atualize `published` e mova a versão anterior para
+`previous`.
+
+A capa vem da miniatura do próprio vídeo no YouTube, baixada e recortada de 4:3
+para 16:9, e servida daqui. Buscá-la em `i.ytimg.com` a cada visita entregaria
+ao Google o endereço de quem só abriu a página.
 
 A segunda parte é a lista de itens da galeria, fotos e clipes na ordem em que
 aparecem. Cada item declara as próprias dimensões:
@@ -202,9 +219,9 @@ e sobrepõe as traduções por cima. Na prática:
   reordenar os marcadores livremente na tradução, porque eles são nomeados. Um
   marcador desconhecido é deixado como está, em vez de virar `undefined`.
 
-### Publicar o template de slides
+### Template de slides e slides da abertura
 
-Quando o template de slides do WCIA existir, preencha **um único campo**, em
+O template de slides do WCIA está publicado. A URL fica num **único campo**, em
 `i18n/pt.json`:
 
 ```json
@@ -213,8 +230,20 @@ Quando o template de slides do WCIA existir, preencha **um único campo**, em
 }
 ```
 
-O aviso "em breve" some sozinho e o botão de acesso aparece nos três idiomas.
-Não é preciso mexer no `en.json` nem no `es.json`, porque a URL é a mesma.
+Preencher esse campo faz o aviso "em breve" sumir e o botão de acesso aparecer
+nos três idiomas. Não é preciso mexer no `en.json` nem no `es.json`, porque a
+URL é a mesma.
+
+Os slides da abertura ficam em `data/event.json`, no item de abertura da
+programação, e viram um link ao lado de "Abertura do WCIA":
+
+```json
+{ "kind": "opening", "slidesUrl": "https://docs.google.com/presentation/d/..." }
+```
+
+Sem `slidesUrl`, a linha aparece só com o rótulo. Ao colar URLs do Google Drive,
+remova o parâmetro `ouid`: ele identifica a conta de quem compartilhou e não é
+necessário para o link funcionar.
 
 ## Idiomas
 
@@ -234,11 +263,12 @@ O repositório é um site de organização do GitHub Pages, então o conteúdo d
 branch `main` é publicado na raiz do domínio. Não há etapa de build nem workflow
 do GitHub Actions: um `git push` basta.
 
-Os vídeos são servidos como arquivos estáticos do próprio Pages. Estão em H.264
-com áudio AAC e com o átomo `moov` no início do arquivo, o que permite ao
-navegador começar a tocar antes de terminar o download. O vídeo de encerramento
-entra na página com `preload="metadata"`, para que quem só veio ver as fotos não
-baixe os 26 MB sem pedir.
+Os clipes da galeria e a primeira versão do vídeo de encerramento são servidos
+como arquivos estáticos do próprio Pages. Estão em H.264 com áudio AAC e com o
+átomo `moov` no início do arquivo, o que permite ao navegador começar a tocar
+antes de terminar o download. Os clipes só carregam quando alguém abre a
+ampliação, e a versão atual do vídeo de encerramento está no YouTube, atrás de
+uma capa, então nenhum vídeo pesa no carregamento da página.
 
 ## Créditos
 

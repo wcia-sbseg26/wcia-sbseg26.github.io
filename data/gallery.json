@@ -1,15 +1,21 @@
 {
-  "_comment": "Galeria do evento. Os arquivos e as dimensões ficam aqui; as legendas, por serem texto, ficam em i18n/<lang>.json, na chave gallery.captions, indexada pelo mesmo id usado aqui.",
+  "_comment": "Galeria do evento. Os arquivos e as dimensões ficam aqui; as legendas, por serem texto, ficam em i18n/<lang>.json, na chave gallery.captions, indexada pelo mesmo id usado aqui. Em closing, youtubeId liga o player sob demanda e previous guarda a versão anterior, ainda hospedada no próprio site.",
   "closing": {
-    "src": "video/wcia2026_encerramento.mp4",
+    "youtubeId": "lTh1qFZY0Sc",
+    "url": "https://youtu.be/lTh1qFZY0Sc",
+    "title": "WCIA 2026 | O Primeiro Workshop Brasileiro de Cibersegurança em IA",
     "poster": "assets/fotos/encerramento-poster.jpg",
-    "type": "video/mp4",
-    "w": 1920,
-    "h": 1080,
-    "duration": 103,
-    "version": 1,
+    "w": 640,
+    "h": 360,
+    "version": 2,
     "published": "2026-09-09",
-    "bytes": 26849059
+    "previous": {
+      "src": "video/wcia2026_encerramento.mp4",
+      "type": "video/mp4",
+      "duration": 103,
+      "bytes": 26849059,
+      "version": 1
+    }
   },
   "items": [
     {

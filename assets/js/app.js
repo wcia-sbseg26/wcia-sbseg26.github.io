@@ -361,50 +361,112 @@
 
   /* --- vídeo de encerramento ---------------------------------------------- */
 
-  /* preload="metadata" e não "auto": o vídeo tem 26 MB e fica no meio da
-     página, então baixar o arquivo inteiro para quem só veio ver as fotos
-     custaria a conexão de quem está no celular. O poster é uma imagem de
-     70 KB e já mostra do que se trata. */
-  function renderClosing() {
-    var frame = document.getElementById('closing-frame');
-    var version = document.getElementById('closing-version');
-    var download = document.getElementById('closing-download');
-    var size = document.getElementById('closing-size');
-    clear(frame);
+  /* Capa em vez do iframe do YouTube: o player traz cerca de 1 MB de script e
+     abre conexão com o Google só por estar na página. Aqui a seção nasce com
+     uma imagem de 48 KB servida pelo próprio site, e o player só entra, já
+     tocando, depois que a pessoa pede. Quem nunca clica não é rastreado. */
+  function youtubeFacade(info) {
+    var facade = el('button', 'closing__facade');
+    facade.type = 'button';
 
-    var info = gallery && gallery.closing;
-    if (!info || !info.src) {
-      version.textContent = '';
-      download.hidden = true;
-      frame.appendChild(dataError('gallery.error'));
-      return;
-    }
+    var poster = el('img', 'closing__poster');
+    poster.src = info.poster;
+    poster.alt = '';                 /* decorativa: o rótulo do botão já descreve */
+    poster.loading = 'lazy';
+    if (info.w && info.h) { poster.width = info.w; poster.height = info.h; }
+    facade.appendChild(poster);
 
+    var play = el('span', 'closing__play');
+    play.appendChild(el('span', 'closing__playicon', '▶'));
+    play.appendChild(el('span', null, t('closing.play')));
+    facade.appendChild(play);
+
+    facade.addEventListener('click', function () {
+      var frame = facade.parentNode;
+
+      /* nocookie e rel=0: sem cookies de rastreio e sem sugestões de canais
+         de terceiros ao terminar. */
+      var iframe = el('iframe', 'closing__embed');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' +
+        encodeURIComponent(info.youtubeId) + '?autoplay=1&rel=0';
+      iframe.title = info.title || t('closing.title');
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; ' +
+        'gyroscope; picture-in-picture; web-share';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+
+      clear(frame);
+      frame.appendChild(iframe);
+    });
+
+    return facade;
+  }
+
+  /* preload="metadata" e não "auto": o arquivo tem 26 MB e fica no meio da
+     página, então baixá-lo inteiro para quem só veio ver as fotos custaria a
+     conexão de quem está no celular. */
+  function localPlayer(info) {
     var video = el('video', 'closing__video');
     video.controls = true;
     video.preload = 'metadata';
     video.playsInline = true;
     if (info.poster) video.poster = info.poster;
-    if (info.w && info.h) {
-      video.width = info.w;
-      video.height = info.h;
-    }
+    if (info.w && info.h) { video.width = info.w; video.height = info.h; }
 
     var source = el('source');
     source.src = info.src;
     source.type = info.type || 'video/mp4';
     video.appendChild(source);
     video.appendChild(document.createTextNode(t('closing.fallback')));
-    frame.appendChild(video);
+    return video;
+  }
 
-    version.textContent = format(t('closing.version'), { date: formatDate(info.published) });
+  function renderClosing() {
+    var frame = document.getElementById('closing-frame');
+    var version = document.getElementById('closing-version');
+    var watch = document.getElementById('closing-watch');
+    var download = document.getElementById('closing-download');
+    var size = document.getElementById('closing-size');
+    clear(frame);
 
-    download.href = info.src;
-    download.hidden = false;
-    size.textContent = format(t('closing.meta'), {
-      duration: clock(info.duration),
-      size: megabytes(info.bytes)
+    var info = gallery && gallery.closing;
+    if (!info || !(info.youtubeId || info.src)) {
+      version.textContent = '';
+      watch.hidden = true;
+      download.hidden = true;
+      frame.appendChild(dataError('gallery.error'));
+      return;
+    }
+
+    frame.appendChild(info.youtubeId ? youtubeFacade(info) : localPlayer(info));
+
+    version.textContent = format(t('closing.version'), {
+      n: num(info.version || 1, 0),
+      date: formatDate(info.published)
     });
+
+    /* Link direto para o YouTube, para quem prefere assistir lá, compartilhar
+       ou usar as legendas e a velocidade do player nativo. */
+    if (info.url) {
+      watch.href = info.url;
+      watch.hidden = false;
+    } else {
+      watch.hidden = true;
+    }
+
+    /* A versão anterior continua hospedada aqui e baixável: é a cópia offline
+       do vídeo e não depende de o YouTube seguir existindo. */
+    var old = info.previous;
+    if (old && old.src) {
+      download.href = old.src;
+      download.hidden = false;
+      size.textContent = format(t('closing.meta'), {
+        duration: clock(old.duration),
+        size: megabytes(old.bytes)
+      });
+    } else {
+      download.hidden = true;
+    }
   }
 
   /* --- galeria ------------------------------------------------------------ */
@@ -583,10 +645,21 @@
 
   /* --- programação realizada ---------------------------------------------- */
 
-  function programRow(label, time) {
+  /* Abertura, intervalo e encerramento são uma linha só. A abertura é a única
+     que pode ter slides, então o link é opcional e some quando slidesUrl está
+     vazio, do mesmo jeito que os PDFs dos artigos. */
+  function programRow(label, entry) {
     var row = el('div', 'prog__moment');
     row.appendChild(el('p', 'prog__momenttitle', label));
-    if (time) row.appendChild(el('p', 'prog__momenttime', time));
+
+    var url = entry && entry.slidesUrl;
+    if (url) {
+      var link = el('a', 'asset', t('program.openingSlides'));
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      row.appendChild(link);
+    }
     return row;
   }
 
@@ -659,9 +732,9 @@
       var body = el('div', 'prog__blockbody');
       (block.items || []).forEach(function (entry) {
         if (entry.kind === 'session') body.appendChild(buildSession(entry));
-        else if (entry.kind === 'opening') body.appendChild(programRow(t('program.opening')));
-        else if (entry.kind === 'break') body.appendChild(programRow(t('program.break')));
-        else if (entry.kind === 'closing') body.appendChild(programRow(t('program.closing')));
+        else if (entry.kind === 'opening') body.appendChild(programRow(t('program.opening'), entry));
+        else if (entry.kind === 'break') body.appendChild(programRow(t('program.break'), entry));
+        else if (entry.kind === 'closing') body.appendChild(programRow(t('program.closing'), entry));
       });
       node.appendChild(body);
       host.appendChild(node);
