@@ -43,20 +43,20 @@
       "h": 960
     },
     {
+      "id": "g17",
+      "kind": "photo",
+      "full": "assets/fotos/g17.jpg",
+      "thumb": "assets/fotos/g17-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
       "id": "g04",
       "kind": "photo",
       "full": "assets/fotos/g04.jpg",
       "thumb": "assets/fotos/g04-t.jpg",
       "w": 1280,
       "h": 960
-    },
-    {
-      "id": "g05",
-      "kind": "photo",
-      "full": "assets/fotos/g05.jpg",
-      "thumb": "assets/fotos/g05-t.jpg",
-      "w": 960,
-      "h": 1280
     },
     {
       "src": "video/wcia2026-apresentacao.mp4",
@@ -78,6 +78,14 @@
       "h": 900
     },
     {
+      "id": "g19",
+      "kind": "photo",
+      "full": "assets/fotos/g19.jpg",
+      "thumb": "assets/fotos/g19-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
       "id": "g07",
       "kind": "photo",
       "full": "assets/fotos/g07.jpg",
@@ -86,10 +94,34 @@
       "h": 900
     },
     {
+      "id": "g20",
+      "kind": "photo",
+      "full": "assets/fotos/g20.jpg",
+      "thumb": "assets/fotos/g20-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g05",
+      "kind": "photo",
+      "full": "assets/fotos/g05.jpg",
+      "thumb": "assets/fotos/g05-t.jpg",
+      "w": 960,
+      "h": 1280
+    },
+    {
       "id": "g08",
       "kind": "photo",
       "full": "assets/fotos/g08.jpg",
       "thumb": "assets/fotos/g08-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g21",
+      "kind": "photo",
+      "full": "assets/fotos/g21.jpg",
+      "thumb": "assets/fotos/g21-t.jpg",
       "w": 1600,
       "h": 900
     },
@@ -102,10 +134,34 @@
       "h": 960
     },
     {
+      "id": "g22",
+      "kind": "photo",
+      "full": "assets/fotos/g22.jpg",
+      "thumb": "assets/fotos/g22-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g18",
+      "kind": "photo",
+      "full": "assets/fotos/g18.jpg",
+      "thumb": "assets/fotos/g18-t.jpg",
+      "w": 960,
+      "h": 1280
+    },
+    {
       "id": "g10",
       "kind": "photo",
       "full": "assets/fotos/g10.jpg",
       "thumb": "assets/fotos/g10-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g23",
+      "kind": "photo",
+      "full": "assets/fotos/g23.jpg",
+      "thumb": "assets/fotos/g23-t.jpg",
       "w": 1600,
       "h": 900
     },
@@ -116,6 +172,14 @@
       "thumb": "assets/fotos/g11-t.jpg",
       "w": 1280,
       "h": 960
+    },
+    {
+      "id": "g24",
+      "kind": "photo",
+      "full": "assets/fotos/g24.jpg",
+      "thumb": "assets/fotos/g24-t.jpg",
+      "w": 1600,
+      "h": 900
     },
     {
       "src": "video/wcia2026-sala.mp4",
@@ -137,10 +201,26 @@
       "h": 960
     },
     {
+      "id": "g25",
+      "kind": "photo",
+      "full": "assets/fotos/g25.jpg",
+      "thumb": "assets/fotos/g25-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
       "id": "g13",
       "kind": "photo",
       "full": "assets/fotos/g13.jpg",
       "thumb": "assets/fotos/g13-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g26",
+      "kind": "photo",
+      "full": "assets/fotos/g26.jpg",
+      "thumb": "assets/fotos/g26-t.jpg",
       "w": 1600,
       "h": 900
     },
