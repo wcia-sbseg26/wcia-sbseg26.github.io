@@ -1,0 +1,474 @@
+{
+  "code": "es",
+  "meta": {
+    "title": "WCIA 2026 · La primera edición · Taller de Ciberseguridad en IA",
+    "description": "Retrospectiva de la primera edición del Taller de Ciberseguridad en IA (WCIA), en el SBSeg 2026: video de cierre, galería del evento, programación realizada, artículos aceptados y estadísticas."
+  },
+  "nav": {
+    "skip": "Ir al contenido",
+    "brand": "WCIA",
+    "brandFull": "Taller de Ciberseguridad en IA",
+    "official": "Página oficial",
+    "langLabel": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "SBSeg 2026 · Armação dos Búzios, RJ, Brasil · 01 al 04 de septiembre",
+    "title": "La primera edición del WCIA fue un éxito",
+    "subtitle": "Taller de Ciberseguridad en IA, en el SBSeg 2026",
+    "lede": "Fueron 48 artículos enviados, 16 aceptados, tres sesiones temáticas y una sala llena desde la apertura hasta el cierre. Esta página reúne el video de cierre, la galería del evento, la programación realizada, los artículos aceptados y las estadísticas del proceso de evaluación.",
+    "note": "Gracias a quienes enviaron, revisaron, presentaron y asistieron."
+  },
+  "thanks": {
+    "eyebrow": "Agradecimientos",
+    "title": "Un agradecimiento especial",
+    "lede": "Una primera edición no ocurre por decreto. Ocurre porque un conjunto de personas decide, al mismo tiempo, que el tema merece un espacio propio. El WCIA 2026 fue exactamente eso, y es a esas personas a quienes el taller agradece.",
+    "groups": [
+      {
+        "title": "A las personas autoras",
+        "text": "135 autores, de 39 instituciones, confiaron un trabajo a un taller que todavía no tenía primera edición. Fueron 48 envíos, y el nivel del programa es mérito de todas ellas, incluidas las que no fueron aceptadas esta vez. Vuelvan en la próxima."
+      },
+      {
+        "title": "Al Comité de Programa",
+        "text": "Fueron 159 asignaciones de revisión y 144 revisiones concluidas, con revisión doble ciego y al menos tres dictámenes independientes por artículo evaluado, todo dentro de un calendario corto. La calidad del programa empezó ahí, en un trabajo voluntario y poco visible."
+      },
+      {
+        "title": "A quienes presentaron",
+        "text": "Dieciséis presentaciones en tres sesiones, con preguntas y discusión en todas ellas. Gracias por preparar presentaciones a la altura de los artículos y por respetar el tiempo, lo que mantuvo toda la mañana en horario."
+      },
+      {
+        "title": "A quienes asistieron",
+        "text": "La sala estuvo llena de principio a fin, en un taller de mañana. No hay programa que se sostenga sin público, y el del WCIA participó todo el tiempo, con preguntas que siguieron en el pasillo después de cada sesión."
+      },
+      {
+        "title": "A la organización del SBSeg 2026 y a la CESEG",
+        "text": "Por acoger la propuesta de un taller nuevo, por la infraestructura en Armação dos Búzios y por el apoyo que hizo posible la primera edición."
+      }
+    ],
+    "closingNote": "Hasta la próxima edición. La ciberseguridad en IA ya tiene, en Brasil, comunidad, agenda y método."
+  },
+  "closing": {
+    "eyebrow": "Video",
+    "title": "Video de cierre del WCIA 2026",
+    "text": "Una retrospectiva de poco más de un minuto y medio de la primera edición: la apertura, las tres sesiones, los números del proceso de evaluación y el cierre.",
+    "version": "Primera versión, publicada el {date}.",
+    "meta": "{duration} · MP4 · {size}",
+    "download": "Descargar el video",
+    "fallback": "Su navegador no reproduce video en HTML5. Use el enlace de descarga de abajo para ver el video."
+  },
+  "gallery": {
+    "eyebrow": "Galería",
+    "title": "La primera edición en imágenes",
+    "text": "Una selección de las mejores fotos y de los mejores clips del día, a partir del material registrado por quienes estuvieron en la sala. Toque cualquier imagen para ampliarla.",
+    "videoBadge": "Video",
+    "open": "Ampliar",
+    "close": "Cerrar",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "counter": "{n} de {total}",
+    "dialogLabel": "Galería del WCIA 2026",
+    "credit": "Fotos y videos registrados por participantes del WCIA 2026.",
+    "error": "No fue posible cargar la galería.",
+    "captions": {
+      "g01": "La coordinación del WCIA en la apertura de la primera edición del taller.",
+      "g02": "Apertura del WCIA 2026, la mañana del 1 de septiembre.",
+      "g03": "Sala llena para la primera sesión de presentaciones.",
+      "g04": "La sala del WCIA durante una de las sesiones de la mañana.",
+      "g05": "Presentación de artículo completo, con el público siguiendo la charla.",
+      "v01": "Fragmento de una de las presentaciones, ya en la ronda de preguntas.",
+      "g06": "Can LLMs Explain AI? A Study of Explainable AI in Cybersecurity Machine Learning Models.",
+      "g07": "Beyond Guardrails: Tracing Policy, Authority, and Effects in Local LLM Agents.",
+      "g08": "From Implicit Trust to Continuous Verification: A Position on the Authorization of AI Agents in Production Services.",
+      "g09": "Evaluating the Robustness of Small Language Models in Portuguese under Red Teaming with Linguistic Perturbations.",
+      "g10": "A Cross-Lingual Security Evaluation of Prompt Injection Defenses in Small Language Models.",
+      "g11": "Detalle de la metodología de uno de los trabajos presentados.",
+      "v02": "La sala durante la presentación de Avaliação de Táticas de Red Teaming Automatizado em Modelos de Linguagem de Pequeno Porte.",
+      "g12": "Resultados experimentales discutidos con el público.",
+      "g13": "El problema de investigación destacado, al inicio de una presentación.",
+      "g14": "Presentación a dúo, en el cierre de uno de los trabajos.",
+      "g15": "Preguntas y discusión entre el público y quienes presentaron.",
+      "g16": "Foto de grupo en el escenario, al final de una de las sesiones."
+    }
+  },
+  "program": {
+    "eyebrow": "Programación",
+    "title": "La programación realizada",
+    "text": "El WCIA ocupó la mañana del 1 de septiembre, en dos bloques y tres sesiones temáticas. Los artículos completos tuvieron {fullTotal} minutos, {fullTalk} de presentación y {fullQuestions} de preguntas. Los artículos cortos tuvieron {shortTotal} minutos, {shortTalk} de presentación y {shortQuestions} de preguntas.",
+    "sessionLabel": "Sesión {n}",
+    "continued": "continuación",
+    "count": "{n} trabajos",
+    "opening": "Apertura del WCIA",
+    "break": "Intervalo",
+    "closing": "Cierre y premiación al Mejor Artículo",
+    "fullTag": "Completo",
+    "shortTag": "Corto",
+    "typeNote": "El tipo de cada trabajo sigue la lista oficial de artículos aceptados.",
+    "sourceNote": "Programación reproducida de la página oficial del WCIA, consultada el {date}.",
+    "error": "No fue posible cargar la programación. Consulte la página oficial del WCIA.",
+    "sessions": {
+      "sessao1": "Robustez, Seguridad y Adopción de IA",
+      "sessao2": "Seguridad de Agentes de IA",
+      "sessao3": "Seguridad de LLMs: Red Teaming, Robustez e Inyección de Prompts"
+    }
+  },
+  "papers": {
+    "eyebrow": "Programa",
+    "title": "Artículos aceptados",
+    "text": "Los artículos aceptados en el WCIA 2026, en el orden publicado por la coordinación del taller. Cada artículo tiene un espacio reservado para el PDF del trabajo y para el PDF de las diapositivas de la presentación.",
+    "fullTitle": "Artículos completos",
+    "shortTitle": "Artículos cortos",
+    "groupCount": "{n} artículos",
+    "assetsLabel": "Archivos de este artículo",
+    "paperCta": "PDF del artículo",
+    "slidesCta": "PDF de las diapositivas",
+    "paperSoon": "Artículo muy pronto",
+    "slidesSoon": "Diapositivas muy pronto",
+    "sourceNote": "Lista reproducida de la página oficial del WCIA, consultada el {date}. En caso de divergencia, vale la página oficial.",
+    "sourceCta": "Abrir la página oficial del WCIA",
+    "sourceHost": "sbseg2026.uff.br",
+    "error": "No fue posible cargar la lista de artículos. Consulta la página oficial del WCIA."
+  },
+  "stats": {
+    "eyebrow": "Números",
+    "title": "Estadísticas generales",
+    "text": "Resultado del proceso de evaluación del WCIA 2026, con revisión doble ciego y al menos tres revisiones independientes por artículo.",
+    "submitted": "Artículos enviados",
+    "accepted": "Artículos aceptados",
+    "rate": "Tasa de aceptación",
+    "pcMembers": "Miembros del Comité de Programa",
+    "authors": "Autores únicos",
+    "institutions": "Instituciones",
+    "ratioTitle": "Aceptación por tipo de artículo",
+    "fullLabel": "Artículos completos",
+    "shortLabel": "Artículos cortos",
+    "submissions": "{n} envíos",
+    "acceptedSeg": "aceptados",
+    "restSeg": "no aceptados",
+    "rejectedOne": "rechazado",
+    "rejectedMany": "rechazados",
+    "withdrawnOne": "retirado",
+    "withdrawnMany": "retirados",
+    "barLabel": "{group}: {accepted} de {submitted} artículos aceptados, {rate}.",
+    "notes": [
+      "{reviewed} de los {submitted} artículos enviados fueron efectivamente evaluados.",
+      "{assignments} asignaciones de revisión, con {done} revisiones concluidas.",
+      "Todos los artículos evaluados recibieron al menos {min} revisiones independientes.",
+      "{authors} autores únicos, distribuidos en {institutions} instituciones.",
+      "{multi} envíos involucraron a autores de múltiples instituciones.",
+      "{high} artículos obtuvieron un promedio ponderado de las evaluaciones (WAvg) superior a {cut}."
+    ],
+    "error": "No fue posible cargar las estadísticas. Consulta la página oficial del WCIA."
+  },
+  "committee": {
+    "eyebrow": "Revisión",
+    "title": "Comité de Programa",
+    "text": "Las {listed} personas que formaron el Comité de Programa del WCIA 2026. De ellas, {active} participaron efectivamente de la evaluación, con {assignments} asignaciones de revisión y {done} revisiones concluidas.",
+    "coordination": "Coordinación del WCIA",
+    "generalCoordination": "Coordinación General del SBSeg 2026",
+    "ceseg": "Coordinación de la CESEG",
+    "membersTitle": "Miembros",
+    "error": "No fue posible cargar el Comité de Programa. Consulte la página oficial del WCIA."
+  },
+  "slidesCall": {
+    "eyebrow": "Invitación a las personas autoras",
+    "title": "Envía las diapositivas de tu presentación",
+    "text": "En eventos como el USENIX Security Symposium, el artículo y las diapositivas de la presentación se publican lado a lado, en acceso abierto. El WCIA adopta la misma práctica, y el envío de las diapositivas es voluntario.",
+    "items": [
+      "Después de tu sesión, envía el PDF de las diapositivas a la coordinación del WCIA. El enlace pasa a aparecer en esta página, junto a tu artículo.",
+      "Envía un PDF, y no el formato de edición: el PDF preserva las fuentes y el diseño en cualquier computadora.",
+      "Nombra el archivo con el apellido de quien presentó y un fragmento del título, por ejemplo silva-red-teaming-slms.pdf.",
+      "Confirma con las personas coautoras que la versión enviada puede publicarse y retira datos sensibles o aún no divulgados."
+    ],
+    "why": "Las diapositivas publicadas amplían el alcance del trabajo, ayudan a quien no pudo asistir a la sesión y sirven de referencia para las próximas ediciones del taller.",
+    "cta": "Enviar las diapositivas por correo",
+    "subject": "WCIA 2026: diapositivas de la presentación",
+    "soon": "La dirección para el envío se publicará aquí muy pronto. Hasta entonces, contacta a la coordinación del WCIA.",
+    "email": ""
+  },
+  "guides": {
+    "eyebrow": "Material de apoyo",
+    "title": "Sugerencias para las presentaciones",
+    "text": "El material que orientó las presentaciones del WCIA 2026 sigue publicado, para las próximas ediciones y para quien quiera reaprovecharlo en otros eventos."
+  },
+  "template": {
+    "eyebrow": "Diapositivas",
+    "title": "Plantilla de diapositivas del WCIA",
+    "text": "El WCIA tendrá una plantilla de diapositivas propia, que se sugerirá a las personas autoras de los trabajos aceptados. La plantilla podrá copiarse, modificarse y usarse libremente.",
+    "soon": "Muy pronto. El enlace se publicará aquí en cuanto la plantilla esté disponible.",
+    "cta": "Abrir la plantilla de diapositivas",
+    "url": ""
+  },
+  "timer": {
+    "eyebrow": "Herramienta",
+    "title": "División del tiempo de la presentación",
+    "text": "Normalmente tu contribución está en la parte final del artículo, así que merece la mayor parte del tiempo. Indica la duración de tu turno para ver la división sugerida en minutos.",
+    "inputLabel": "Duración del turno",
+    "unit": "minutos",
+    "parts": [
+      {
+        "label": "Fundamentación",
+        "share": 30
+      },
+      {
+        "label": "Objetivo y problema",
+        "share": 15
+      },
+      {
+        "label": "Contribución, resultados y limitaciones",
+        "share": 45
+      },
+      {
+        "label": "Consideraciones, trabajos futuros y agradecimientos",
+        "share": 10
+      }
+    ],
+    "toleranceTitle": "Ventana de tiempo aceptable",
+    "toleranceTarget": "Meta en los ensayos, tolerancia del 5%",
+    "toleranceLimit": "Límite que no se debe superar, tolerancia del 10%",
+    "slidesHint": "Referencia de cantidad de diapositivas, cerca de una por minuto, sin contar portada ni cierre",
+    "slidesUnit": "diapositivas",
+    "caption": "Porcentajes sugeridos por el material original. El tiempo de preguntas no está incluido."
+  },
+  "demo": {
+    "eyebrow": "Comparación",
+    "title": "Transcribir el artículo o escribir un titular",
+    "badLabel": "Evita",
+    "goodLabel": "Prefiere",
+    "bad": "El nuevo sistema XPTO desarrollado en este trabajo tuvo un desempeño que superó en un 30% a la mejor versión de la literatura.",
+    "good": "XPTO: desempeño un 30% superior al estado del arte",
+    "caption": "La frase completa va en tu discurso. La diapositiva se queda con el titular."
+  },
+  "toc": "En esta página",
+  "sections": [
+    {
+      "id": "gerais",
+      "eyebrow": "Parte 1",
+      "title": "Consejos generales",
+      "items": [
+        {
+          "text": "Usa diapositivas limpias, preferentemente con fondo blanco y texto negro."
+        },
+        {
+          "text": "No exageres con la cantidad de colores, salvo que sea absolutamente necesario para diferenciar datos en gráficos."
+        },
+        {
+          "text": "Usa esquemas de color con buen contraste. Lectura recomendada:",
+          "links": [
+            {
+              "label": "Choosing colors for your presentation slides",
+              "url": "https://www.thinkoutsidetheslide.com/choosing-colors-for-your-presentation-slides/"
+            },
+            {
+              "label": "Psychology of color in PowerPoint presentations",
+              "url": "https://presentationteam.com/psychology-of-color-in-powerpoint-presentations/"
+            },
+            {
+              "label": "How to choose a color scheme",
+              "url": "https://visme.co/blog/how-to-choose-a-color-scheme/"
+            }
+          ]
+        },
+        {
+          "text": "Dedica tiempo y energía a la calidad del contenido de las diapositivas."
+        },
+        {
+          "text": "Usa las diapositivas solo como guía de tu discurso, evitando sobrecargarlas de información."
+        },
+        {
+          "text": "No te limites a leer las diapositivas, porque transmite una impresión muy mala de falta de preparación. Al ver la nueva diapositiva, el contenido ya surgirá en tu cabeza y podrás desarrollarlo sin necesidad de leer."
+        },
+        {
+          "text": "No dejes de mirar al público, esto es muy importante. La presentación no es para ti, para la pantalla, para la computadora, para el suelo, para el techo ni para las paredes: es para el público. Si eres una persona tímida, basta con ir cambiando la mirada de un lugar a otro de la sala, o un poco por encima de la cabeza de las personas, en un punto al fondo."
+        },
+        {
+          "text": "Ensaya tu presentación para garantizar que respetas el tiempo establecido por el evento, de pie y hablando en voz alta."
+        },
+        {
+          "text": "Incluye numeración en las diapositivas, porque facilita las discusiones y las preguntas."
+        },
+        {
+          "text": "Haz varias iteraciones de mejora en las diapositivas. Igual que un buen texto, una buena presentación exige trabajo y ciclos de refinamiento."
+        },
+        {
+          "text": "Inspírate en buenos ejemplos de otras presentaciones."
+        },
+        {
+          "text": "Prueba a salir de lo clásico. En lugar de empezar con la tradicional diapositiva de índice, considera comenzar con una motivación fuerte o una problemática relevante. Muchas veces eso hace la presentación más atractiva y fluida."
+        },
+        {
+          "text": "Recuerda que la finalidad de una presentación es que quien está mirando comprenda una idea y logre entender tus argumentos y tu línea de razonamiento. Si al final de la presentación eso no se alcanza, la presentación falló. Presentar un trabajo es el acto de hacer que el público entienda tus argumentos, no necesariamente que esté de acuerdo con la información presentada."
+        }
+      ]
+    },
+    {
+      "id": "conteudo",
+      "eyebrow": "Parte 2",
+      "title": "Consejos de contenido",
+      "items": [
+        {
+          "text": "¿Cuántas diapositivas hacer? No hay una respuesta única. Algunas personas hablan de alrededor de una diapositiva por minuto, pero eso varía según el contenido y según lo que se quiera explicar. Las diapositivas con mucho texto tienden a consumir más tiempo y a resultar menos motivadoras para el público."
+        },
+        {
+          "text": "Evita bloques de texto, como párrafos y frases largas:",
+          "demo": "headline",
+          "children": [
+            "Prefiere ítems cortos y directos, que sirvan solo como guía de tu discurso.",
+            "No transcribas oraciones ni párrafos del texto a las diapositivas.",
+            "Evita oraciones completas con artículo, adjetivo, sujeto, preposición, verbo y objetos directo e indirecto. Eso es para textos, no para diapositivas.",
+            "La mejor forma de transmitir el contenido de manera simple y directa es inspirarse en los titulares de prensa, completando los detalles en tu discurso, que sí puede tener oraciones más completas y explicativas."
+          ]
+        },
+        {
+          "text": "Usa fuentes grandes, muy grandes:",
+          "children": [
+            "Preferentemente 24pt o mayor para el contenido de las diapositivas, imágenes y tablas.",
+            "Los títulos de las diapositivas deben tener 32pt o más.",
+            "No dejes mucho espacio en blanco en tus diapositivas. Si hay espacio en blanco, es porque las fuentes o las figuras podrían ser mayores y ocupar un espacio valioso que no se está aprovechando.",
+            "Ten en cuenta que esto no significa llenar la diapositiva con contenido excesivo."
+          ]
+        },
+        {
+          "text": "Utiliza buenas imágenes:",
+          "children": [
+            "Prefiere imágenes significativas, representativas y de alta calidad.",
+            "Da preferencia a imágenes vectoriales o de alta definición, por ejemplo SVG, PNG y PDF.",
+            "Si al hacer zoom la diapositiva muestra fuentes o figuras borrosas o con artefactos cuadriculados, considera cambiarlas por una versión de mayor definición o vectorial.",
+            "Las figuras hechas copiando y pegando regiones de la pantalla son la peor alternativa y deben evitarse."
+          ]
+        },
+        {
+          "text": "Mejora la presentación de las tablas:",
+          "children": [
+            "Reconstruye las tablas complejas para que queden más claras en las diapositivas.",
+            "No siempre es necesario mostrar la tabla completa, presenta solo los datos más relevantes.",
+            "No siempre es necesario mostrar todas las tablas y datos de tu artículo. Es mejor explicar bien y con calma los datos más relevantes que intentar mostrarlo todo de forma apresurada y poco comprensible.",
+            "Muestra tablas e imágenes de forma progresiva en las diapositivas, destacando con círculos, rectángulos o flechas las partes que se están explicando."
+          ]
+        },
+        {
+          "text": "Usa técnicas simples para destacar y explicar gradualmente imágenes y gráficos:",
+          "children": [
+            "Por ejemplo, usa un rectángulo blanco o parcialmente transparente para cubrir las partes de la imagen que se explicarán después, o distribuye el contenido de la diapositiva en varias otras, añadiendo contenido en cada una.",
+            "Es muy importante conquistar y mantener cautiva la atención del público sobre el punto que estás explicando. Si la diapositiva tiene mucha información, texto o figuras, buena parte del público podría estar intentando leer y entender partes distintas de la que estás explicando."
+          ]
+        },
+        {
+          "text": "Aunque es recomendable, no es obligatorio poner título en todas las diapositivas:",
+          "children": [
+            "En algunos casos, ampliar el tamaño de la imagen o de la tabla puede ser más eficaz que incluir un título."
+          ]
+        },
+        {
+          "text": "Evita sobrecargar las diapositivas:",
+          "children": [
+            "Demasiado contenido, ya sea texto o imágenes y tablas complejas, distrae al público. Es fundamental seleccionar con cuidado qué se presenta en cada diapositiva. Menos es más.",
+            "Si hay varias imágenes en una misma diapositiva, considera repartirlas en más diapositivas, para aumentar su tamaño y su inteligibilidad y mantener el foco del público en la imagen que estás explicando."
+          ]
+        },
+        {
+          "text": "Elige selectivamente el contenido más relevante a presentar dentro del tiempo disponible:",
+          "children": [
+            "Céntrate en el problema, la solución, los desafíos y los resultados.",
+            "Presentar un contexto largo aporta poco y puede costarte la atención del público a mitad de camino.",
+            "No hace falta gastar tiempo justificando tu investigación, basta con presentar claramente el problema que se está resolviendo.",
+            "Se recomienda no dedicar mucho tiempo a los trabajos relacionados."
+          ]
+        },
+        {
+          "text": "Procura numerar tus diapositivas. La numeración tiene dos propósitos principales:",
+          "children": [
+            "Facilitar que el público tome notas y dirija mejor las preguntas.",
+            "Permitirte, si has ensayado, controlar tu tiempo y saber si vas al ritmo correcto, adelantado o atrasado."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "preparacao",
+      "eyebrow": "Parte 3",
+      "title": "Consejos de preparación",
+      "items": [
+        {
+          "text": "Mira tu presentación en un teléfono móvil a 50 cm de distancia:",
+          "children": [
+            "Si todo resulta legible y comprensible, tus diapositivas estarán bien preparadas para distintos entornos."
+          ]
+        },
+        {
+          "text": "Haz al menos dos revisiones del contenido de la presentación con tus coautores."
+        },
+        {
+          "text": "Planifica tu presentación dentro del tiempo estipulado en el turno que te asignaron en el evento."
+        },
+        {
+          "text": "Si tienes dudas sobre el tiempo, contacta al chair de tu sesión o del evento."
+        },
+        {
+          "text": "Algunas personas sugieren preparar una diapositiva por minuto de presentación, sin contar la portada ni el cierre. El consejo es bueno, pero debe tomarse con cuidado, porque es más preciso para presentaciones cortas. En las más largas, la gente termina relajándose y gastando más de un minuto por diapositiva."
+        },
+        {
+          "text": "Si pasas mucho tiempo, dos minutos o más, hablando de una misma diapositiva, probablemente tiene demasiado contenido y debería dividirse en dos o tres. Resulta muy pesado para el público escuchar una presentación que casi no cambia de diapositiva."
+        },
+        {
+          "text": "Tampoco es nada bueno hablar de un montón de cosas que la diapositiva no cubre. El público se pierde con facilidad si no encuentra en la diapositiva el apoyo de lo que se está diciendo. No se trata de leer solo lo que está en la diapositiva, y siempre conviene complementar con frases más elaboradas, pero no al punto de transmitir información fundamental solo de palabra, sin que aparezca en la diapositiva."
+        },
+        {
+          "text": "Respeta, respeta y respeta el tiempo que te fue asignado. Ten como meta en los ensayos una tolerancia del 5% del tiempo asignado, sin incluir el tiempo de preguntas, para terminar antes o después del plazo. Normalmente quienes presiden la sesión toleran algo más si es necesario, pero jamás debemos superar la marca del 10% de tolerancia, por exceso o por defecto, en el momento de la presentación. Podemos perder el derecho a concluir o perder una excelente oportunidad de transmitir nuestro mensaje."
+        },
+        {
+          "text": "Uno de los problemas más comunes y bochornosos ocurre cuando la persona no termina al final de su tiempo, obligando a quien preside la sesión a interrumpirla sin que haya concluido, o cuando termina mucho antes del tiempo asignado. El primer caso muestra cierto desprecio por las reglas y una falta de respeto hacia la organización y el público. El segundo muestra desprecio por el tiempo, de oro, que se concedió y no se aprovechó."
+        },
+        {
+          "text": "Normalmente tu contribución está en la parte final del artículo, así que esa debe ser la mayor parte del tiempo. Una buena sugerencia de división del tiempo de la presentación:",
+          "children": [
+            "Alrededor del 30% del tiempo para la fundamentación.",
+            "Alrededor del 15% del tiempo para la definición del objetivo o del problema.",
+            "Alrededor del 45% del tiempo para tu contribución, principalmente discusión de resultados, limitaciones y contribuciones.",
+            "Alrededor del 10% para consideraciones, trabajos futuros y agradecimientos."
+          ]
+        },
+        {
+          "text": "Ensaya la presentación al menos cinco veces, para ayudar a tu cerebro a:",
+          "children": [
+            "Fijar el contenido.",
+            "Estar más tranquilo.",
+            "Crear una secuencia lógica y natural para la presentación."
+          ]
+        },
+        {
+          "text": "La falta de ensayos se percibe fácilmente por el público, porque quien presenta:",
+          "children": [
+            "Tartamudea.",
+            "Se detiene muchas veces a pensar qué va a decir.",
+            "Repite cosas ya dichas, creyendo que encontró una forma mejor de explicar lo que ya debería haber quedado claro antes.",
+            "No logra transmitir el mensaje más relevante del artículo dentro del tiempo disponible.",
+            "Puede ser interrumpido antes de terminar, por exceder el tiempo asignado.",
+            "Puede quedarse sin tiempo para preguntas y discusiones, que son algunos de los objetivos y beneficios más importantes de una presentación."
+          ]
+        },
+        {
+          "text": "La experiencia muestra que solo a partir del quinto o sexto ensayo el discurso de la presentación se vuelve fluido, bien organizado, sin redundancias y más fácil de seguir."
+        },
+        {
+          "text": "Si puedes, graba en vídeo o audio tus ensayos y escúchalos algún tiempo después. Percibirás puntos a mejorar que no quedaron tan claros durante la grabación."
+        }
+      ]
+    }
+  ],
+  "credits": {
+    "eyebrow": "Créditos",
+    "title": "Colaboradores",
+    "people": "Diego Kreutz (UNIPAMPA), Marco A. Amaral Henriques (UNICAMP), Charles Christian Miers (UDESC), Cintia Borges Margi (USP), Rodrigo Brandão Mansilha (UNIPAMPA)",
+    "originPrefix": "Material producido originalmente para el SBSeg 2024 y adaptado para el WCIA / SBSeg 2026.",
+    "originLink": "Ver la versión original del SBSeg 2024"
+  },
+  "footer": {
+    "workshop": "Taller de Ciberseguridad en IA",
+    "event": "XXVI Simposio Brasileño de Ciberseguridad, SBSeg 2026",
+    "place": "Armação dos Búzios, RJ, Brasil, del 1 al 4 de septiembre de 2026",
+    "coordination": "Coordinación del WCIA",
+    "coordinators": "Victor Hayashi (USP), Oscar Paiva (Bradesco), Diego Kreutz (UNIPAMPA), Rodrigo Sanches Miani (UFU)",
+    "officialLink": "Página oficial del WCIA",
+    "solLink": "Actas en SBC-OpenLib"
+  },
+  "noscript": "Este sitio usa JavaScript para cargar el contenido en los tres idiomas. Con JavaScript desactivado, consulta la página oficial del WCIA."
+}

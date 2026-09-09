@@ -1,0 +1,166 @@
+{
+  "_comment": "Galeria do evento. Os arquivos e as dimensões ficam aqui; as legendas, por serem texto, ficam em i18n/<lang>.json, na chave gallery.captions, indexada pelo mesmo id usado aqui.",
+  "closing": {
+    "src": "video/wcia2026_encerramento.mp4",
+    "poster": "assets/fotos/encerramento-poster.jpg",
+    "type": "video/mp4",
+    "w": 1920,
+    "h": 1080,
+    "duration": 103,
+    "version": 1,
+    "published": "2026-09-09",
+    "bytes": 26849059
+  },
+  "items": [
+    {
+      "id": "g01",
+      "kind": "photo",
+      "full": "assets/fotos/g01.jpg",
+      "thumb": "assets/fotos/g01-t.jpg",
+      "w": 960,
+      "h": 1280
+    },
+    {
+      "id": "g02",
+      "kind": "photo",
+      "full": "assets/fotos/g02.jpg",
+      "thumb": "assets/fotos/g02-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g03",
+      "kind": "photo",
+      "full": "assets/fotos/g03.jpg",
+      "thumb": "assets/fotos/g03-t.jpg",
+      "w": 1280,
+      "h": 960
+    },
+    {
+      "id": "g04",
+      "kind": "photo",
+      "full": "assets/fotos/g04.jpg",
+      "thumb": "assets/fotos/g04-t.jpg",
+      "w": 1280,
+      "h": 960
+    },
+    {
+      "id": "g05",
+      "kind": "photo",
+      "full": "assets/fotos/g05.jpg",
+      "thumb": "assets/fotos/g05-t.jpg",
+      "w": 960,
+      "h": 1280
+    },
+    {
+      "src": "video/wcia2026-apresentacao.mp4",
+      "poster": "assets/fotos/v01.jpg",
+      "thumb": "assets/fotos/v01-t.jpg",
+      "w": 576,
+      "h": 1024,
+      "duration": 17,
+      "id": "v01",
+      "kind": "video",
+      "type": "video/mp4"
+    },
+    {
+      "id": "g06",
+      "kind": "photo",
+      "full": "assets/fotos/g06.jpg",
+      "thumb": "assets/fotos/g06-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g07",
+      "kind": "photo",
+      "full": "assets/fotos/g07.jpg",
+      "thumb": "assets/fotos/g07-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g08",
+      "kind": "photo",
+      "full": "assets/fotos/g08.jpg",
+      "thumb": "assets/fotos/g08-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g09",
+      "kind": "photo",
+      "full": "assets/fotos/g09.jpg",
+      "thumb": "assets/fotos/g09-t.jpg",
+      "w": 1280,
+      "h": 960
+    },
+    {
+      "id": "g10",
+      "kind": "photo",
+      "full": "assets/fotos/g10.jpg",
+      "thumb": "assets/fotos/g10-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g11",
+      "kind": "photo",
+      "full": "assets/fotos/g11.jpg",
+      "thumb": "assets/fotos/g11-t.jpg",
+      "w": 1280,
+      "h": 960
+    },
+    {
+      "src": "video/wcia2026-sala.mp4",
+      "poster": "assets/fotos/v02.jpg",
+      "thumb": "assets/fotos/v02-t.jpg",
+      "w": 576,
+      "h": 1024,
+      "duration": 7,
+      "id": "v02",
+      "kind": "video",
+      "type": "video/mp4"
+    },
+    {
+      "id": "g12",
+      "kind": "photo",
+      "full": "assets/fotos/g12.jpg",
+      "thumb": "assets/fotos/g12-t.jpg",
+      "w": 1280,
+      "h": 960
+    },
+    {
+      "id": "g13",
+      "kind": "photo",
+      "full": "assets/fotos/g13.jpg",
+      "thumb": "assets/fotos/g13-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g14",
+      "kind": "photo",
+      "full": "assets/fotos/g14.jpg",
+      "thumb": "assets/fotos/g14-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g15",
+      "kind": "photo",
+      "full": "assets/fotos/g15.jpg",
+      "thumb": "assets/fotos/g15-t.jpg",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "id": "g16",
+      "kind": "photo",
+      "full": "assets/fotos/g16.jpg",
+      "thumb": "assets/fotos/g16-t.jpg",
+      "w": 1600,
+      "h": 900
+    }
+  ]
+}

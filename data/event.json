@@ -1,0 +1,378 @@
+{
+  "_comment": "Dados do evento que não se traduzem: a programação realizada, o Comitê de Programa e as coordenações. Os títulos das sessões e os rótulos ficam em i18n/<lang>.json. Cada sessão referencia os artigos pelo id usado em data/papers.json, para que título e autoria existam num lugar só.",
+  "source": "https://www.sbseg2026.uff.br/workshops/wcia/",
+  "collected": "2026-09-09",
+  "date": "2026-09-01",
+  "place": "Armação dos Búzios, RJ",
+  "durations": {
+    "full": {
+      "total": 11,
+      "talk": 8,
+      "questions": 3
+    },
+    "short": {
+      "total": 6,
+      "talk": 4,
+      "questions": 2
+    }
+  },
+  "program": [
+    {
+      "id": "bloco1",
+      "time": "09:00–10:30",
+      "items": [
+        {
+          "kind": "opening"
+        },
+        {
+          "kind": "session",
+          "session": "sessao1",
+          "number": 1,
+          "papers": [
+            "f5",
+            "f7",
+            "f11",
+            "f12",
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "kind": "session",
+          "session": "sessao2",
+          "number": 2,
+          "papers": [
+            "f3",
+            "f6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intervalo",
+      "time": "10:30–11:00",
+      "items": [
+        {
+          "kind": "break"
+        }
+      ]
+    },
+    {
+      "id": "bloco2",
+      "time": "11:00–12:30",
+      "items": [
+        {
+          "kind": "session",
+          "session": "sessao2",
+          "number": 2,
+          "continued": true,
+          "papers": [
+            "f9",
+            "f10",
+            "s3"
+          ]
+        },
+        {
+          "kind": "session",
+          "session": "sessao3",
+          "number": 3,
+          "papers": [
+            "f2",
+            "f1",
+            "f4",
+            "f8",
+            "s4"
+          ]
+        },
+        {
+          "kind": "closing"
+        }
+      ]
+    }
+  ],
+  "coordination": [
+    {
+      "name": "Victor Hayashi",
+      "affiliation": "USP"
+    },
+    {
+      "name": "Oscar Paiva",
+      "affiliation": "Bradesco"
+    },
+    {
+      "name": "Diego Kreutz",
+      "affiliation": "UNIPAMPA"
+    },
+    {
+      "name": "Rodrigo Sanches Miani",
+      "affiliation": "UFU"
+    }
+  ],
+  "generalCoordination": [
+    {
+      "name": "Dianne Scherly Varela de Medeiros",
+      "affiliation": "UFF"
+    },
+    {
+      "name": "Diogo Menezes Ferrazani Mattos",
+      "affiliation": "UFF"
+    }
+  ],
+  "cesegCoordination": [
+    {
+      "name": "Marcos Simplicio",
+      "affiliation": "USP"
+    },
+    {
+      "name": "Diego Kreutz",
+      "affiliation": "UNIPAMPA"
+    }
+  ],
+  "committee": [
+    {
+      "name": "Altair Olivo Santin",
+      "affiliation": "Pontifícia Universidade Católica do Paraná",
+      "acronym": "PUCPR"
+    },
+    {
+      "name": "André R. A. Grégio",
+      "affiliation": "Universidade Federal do Paraná",
+      "acronym": "UFPR"
+    },
+    {
+      "name": "Bruno Bogaz Zarpelão",
+      "affiliation": "Universidade Estadual de Londrina",
+      "acronym": "UEL"
+    },
+    {
+      "name": "Bruno de Carvalho Albertini",
+      "affiliation": "Escola Politécnica da Universidade de São Paulo",
+      "acronym": "EPUSP"
+    },
+    {
+      "name": "Bryan Kano Ferreira",
+      "affiliation": "Instituto de Tecnologia e Liderança",
+      "acronym": "Inteli"
+    },
+    {
+      "name": "Cesar A. Marcondes",
+      "affiliation": "Instituto Tecnológico de Aeronáutica",
+      "acronym": "ITA"
+    },
+    {
+      "name": "Charles Christian Miers",
+      "affiliation": "Universidade do Estado de Santa Catarina",
+      "acronym": "UDESC"
+    },
+    {
+      "name": "Diego Kreutz",
+      "affiliation": "Universidade Federal do Pampa",
+      "acronym": "UNIPAMPA"
+    },
+    {
+      "name": "Diego Molinos",
+      "affiliation": "Universidade Federal de Uberlândia",
+      "acronym": "UFU"
+    },
+    {
+      "name": "Eduardo Kugler Viegas",
+      "affiliation": "Pontifícia Universidade Católica do Paraná",
+      "acronym": "PUCPR"
+    },
+    {
+      "name": "Elaine Faria",
+      "affiliation": "Universidade Federal de Uberlândia",
+      "acronym": "UFU"
+    },
+    {
+      "name": "Felipe Valencia de Almeida",
+      "affiliation": "Universidade de São Paulo",
+      "acronym": "USP"
+    },
+    {
+      "name": "Gilberto Fernandes Junior",
+      "affiliation": "Universidade Estadual de Londrina",
+      "acronym": "UEL"
+    },
+    {
+      "name": "Gustavo Bernardo",
+      "affiliation": "Universidade Federal de Uberlândia",
+      "acronym": "UFU"
+    },
+    {
+      "name": "Ivan Silva Sendin",
+      "affiliation": "Universidade Federal de Uberlândia",
+      "acronym": "UFU"
+    },
+    {
+      "name": "João Henrique Kleinschmidt",
+      "affiliation": "Universidade Federal do ABC",
+      "acronym": "UFABC"
+    },
+    {
+      "name": "Jonatas Rossetti",
+      "affiliation": "Banco Bradesco S.A.",
+      "acronym": "Bradesco"
+    },
+    {
+      "name": "Juliano Maranhão",
+      "affiliation": "Universidade de São Paulo",
+      "acronym": "USP"
+    },
+    {
+      "name": "Kelton Augusto Pontara da Costa",
+      "affiliation": "Universidade Estadual Paulista Júlio de Mesquita Filho",
+      "acronym": "UNESP"
+    },
+    {
+      "name": "Kil J. B. Park",
+      "affiliation": "Universidade Federal de Uberlândia",
+      "acronym": "UFU"
+    },
+    {
+      "name": "Larissa Ferreira Rodrigues Moreira",
+      "affiliation": "Universidade Federal de Viçosa",
+      "acronym": "UFV"
+    },
+    {
+      "name": "Lilian Berton",
+      "affiliation": "Universidade Federal de São Paulo",
+      "acronym": "UNIFESP"
+    },
+    {
+      "name": "Lourenco Alves Pereira Jr",
+      "affiliation": "Instituto Tecnológico de Aeronáutica",
+      "acronym": "ITA"
+    },
+    {
+      "name": "Luis F. Faina",
+      "affiliation": "Universidade Federal de Uberlândia",
+      "acronym": "UFU"
+    },
+    {
+      "name": "Marcelo A. C. Fernandes",
+      "affiliation": "Universidade Federal do Rio Grande do Norte",
+      "acronym": "UFRN"
+    },
+    {
+      "name": "Marcos Antonio Simplicio Jr",
+      "affiliation": "Universidade de São Paulo",
+      "acronym": "USP"
+    },
+    {
+      "name": "Marcos Lopes",
+      "affiliation": "Universidade de São Paulo",
+      "acronym": "USP"
+    },
+    {
+      "name": "Marcus Botacin",
+      "affiliation": "Texas A&M University",
+      "acronym": "TAMU"
+    },
+    {
+      "name": "Naomi Nomura",
+      "affiliation": "Escola de Direito de São Paulo",
+      "acronym": "FGV Direito SP"
+    },
+    {
+      "name": "Oscar Paiva",
+      "affiliation": "Banco Bradesco S.A.",
+      "acronym": "Bradesco"
+    },
+    {
+      "name": "Paulo Gabriel",
+      "affiliation": "Universidade Federal de Uberlândia",
+      "acronym": "UFU"
+    },
+    {
+      "name": "Paulo Cesar G. Costa",
+      "affiliation": "George Mason University",
+      "acronym": "GMU"
+    },
+    {
+      "name": "Pedro Damaso",
+      "affiliation": "Universidade Federal de Viçosa",
+      "acronym": "UFV"
+    },
+    {
+      "name": "Pedro Ramos",
+      "affiliation": "Reglab – Centro de Pesquisa & Estratégia",
+      "acronym": "Reglab"
+    },
+    {
+      "name": "Pedro Henrique Barcha Correia",
+      "affiliation": "Escola Politécnica da Universidade de São Paulo",
+      "acronym": "EPUSP"
+    },
+    {
+      "name": "Rodrigo Brandão Mansilha",
+      "affiliation": "Universidade Federal do Pampa",
+      "acronym": "UNIPAMPA"
+    },
+    {
+      "name": "Rodrigo Miani",
+      "affiliation": "Universidade Federal de Uberlândia",
+      "acronym": "UFU"
+    },
+    {
+      "name": "Rodrigo Moreira",
+      "affiliation": "Universidade Federal de Viçosa",
+      "acronym": "UFV"
+    },
+    {
+      "name": "Ryan Achjian",
+      "affiliation": "Bradesco e Escola Politécnica da USP",
+      "acronym": "Bradesco/EPUSP"
+    },
+    {
+      "name": "Silvio Quincozes",
+      "affiliation": "Universidade Federal do Pampa",
+      "acronym": "UNIPAMPA"
+    },
+    {
+      "name": "Sylvio Barbon Junior",
+      "affiliation": "University of Trieste",
+      "acronym": "UniTS"
+    },
+    {
+      "name": "Thais Rodrigues Neubauer",
+      "affiliation": "Universidade de São Paulo",
+      "acronym": "USP"
+    },
+    {
+      "name": "Thales Areco Bandiera Paiva",
+      "affiliation": "Universidade de São Paulo",
+      "acronym": "USP"
+    },
+    {
+      "name": "Vagner Ereno Quincozes",
+      "affiliation": "Universidade Federal Fluminense",
+      "acronym": "UFF"
+    },
+    {
+      "name": "Valério Rosset",
+      "affiliation": "Instituto Tecnológico de Aeronáutica",
+      "acronym": "ITA"
+    },
+    {
+      "name": "Victor Takashi Hayashi",
+      "affiliation": "Universidade de São Paulo",
+      "acronym": "USP"
+    },
+    {
+      "name": "Vinicius Fulber-Garcia",
+      "affiliation": "Universidade Federal do Paraná",
+      "acronym": "UFPR"
+    },
+    {
+      "name": "Vinicius Renan de Carvalho",
+      "affiliation": "Universidade de São Paulo",
+      "acronym": "USP"
+    },
+    {
+      "name": "Vitor Hugo Galhardo Moia",
+      "affiliation": "Instituto de Pesquisas Eldorado",
+      "acronym": "Eldorado"
+    }
+  ]
+}

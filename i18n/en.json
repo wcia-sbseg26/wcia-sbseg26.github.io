@@ -1,0 +1,474 @@
+{
+  "code": "en",
+  "meta": {
+    "title": "WCIA 2026 · The first edition · Workshop on AI Cybersecurity",
+    "description": "A look back at the first edition of the Workshop on AI Cybersecurity (WCIA), at SBSeg 2026: closing video, event gallery, the programme as it ran, accepted papers and statistics."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "brand": "WCIA",
+    "brandFull": "Workshop on AI Cybersecurity",
+    "official": "Official page",
+    "langLabel": "Language"
+  },
+  "hero": {
+    "eyebrow": "SBSeg 2026 · Armação dos Búzios, RJ, Brazil · September 1 to 4",
+    "title": "The first edition of WCIA was a success",
+    "subtitle": "Workshop on AI Cybersecurity, at SBSeg 2026",
+    "lede": "48 papers submitted, 16 accepted, three thematic sessions and a full room from the opening to the close. This page collects the closing video, the event gallery, the programme as it ran, the accepted papers and the statistics of the review process.",
+    "note": "Thank you to everyone who submitted, reviewed, presented and attended."
+  },
+  "thanks": {
+    "eyebrow": "Acknowledgements",
+    "title": "A special thank you",
+    "lede": "A first edition does not happen by decree. It happens because a group of people decides, at the same time, that a subject deserves a venue of its own. That is exactly what WCIA 2026 was, and it is those people the workshop thanks.",
+    "groups": [
+      {
+        "title": "To the authors",
+        "text": "135 authors, from 39 institutions, trusted a piece of work to a workshop that did not yet have a first edition. There were 48 submissions, and the bar the programme reached is to the credit of all of them, including those not accepted this time. Please come back next year."
+      },
+      {
+        "title": "To the Program Committee",
+        "text": "159 review assignments and 144 completed reviews, double-blind and with at least three independent reviews per paper, all on a short schedule. The quality of the programme started there, in volunteer work that rarely gets seen."
+      },
+      {
+        "title": "To the presenters",
+        "text": "Sixteen talks across three sessions, every one of them followed by questions and discussion. Thank you for preparing presentations worthy of the papers, and for keeping to time, which kept the whole morning on schedule."
+      },
+      {
+        "title": "To the audience",
+        "text": "The room was full from beginning to end, in a morning workshop. No programme stands up without an audience, and this one took part throughout, with questions that carried on in the hallway after every session."
+      },
+      {
+        "title": "To the SBSeg 2026 organisation and to CESEG",
+        "text": "For welcoming the proposal of a new workshop, for the venue in Armação dos Búzios and for the support that made the first edition possible."
+      }
+    ],
+    "closingNote": "See you at the next edition. AI cybersecurity in Brazil now has a community, an agenda and a method."
+  },
+  "closing": {
+    "eyebrow": "Video",
+    "title": "WCIA 2026 closing video",
+    "text": "A look back at the first edition in a little over a minute and a half: the opening, the three sessions, the numbers behind the review process and the close.",
+    "version": "First version, published on {date}.",
+    "meta": "{duration} · MP4 · {size}",
+    "download": "Download the video",
+    "fallback": "Your browser cannot play HTML5 video. Use the download link below to watch the video."
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "The first edition in pictures",
+    "text": "A selection of the best photos and clips of the day, from the material captured by the people who were in the room. Tap any image to enlarge it.",
+    "videoBadge": "Video",
+    "open": "Enlarge",
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next",
+    "counter": "{n} of {total}",
+    "dialogLabel": "WCIA 2026 gallery",
+    "credit": "Photos and videos captured by WCIA 2026 participants.",
+    "error": "The gallery could not be loaded.",
+    "captions": {
+      "g01": "The WCIA chairs at the opening of the first edition of the workshop.",
+      "g02": "Opening of WCIA 2026, on the morning of September 1.",
+      "g03": "A full room for the first session of talks.",
+      "g04": "The WCIA room during one of the morning sessions.",
+      "g05": "A full-paper talk, with the audience following along.",
+      "v01": "An excerpt from one of the talks, already in the question round.",
+      "g06": "Can LLMs Explain AI? A Study of Explainable AI in Cybersecurity Machine Learning Models.",
+      "g07": "Beyond Guardrails: Tracing Policy, Authority, and Effects in Local LLM Agents.",
+      "g08": "From Implicit Trust to Continuous Verification: A Position on the Authorization of AI Agents in Production Services.",
+      "g09": "Evaluating the Robustness of Small Language Models in Portuguese under Red Teaming with Linguistic Perturbations.",
+      "g10": "A Cross-Lingual Security Evaluation of Prompt Injection Defenses in Small Language Models.",
+      "g11": "A methodology detail from one of the papers presented.",
+      "v02": "The room during the talk on Avaliação de Táticas de Red Teaming Automatizado em Modelos de Linguagem de Pequeno Porte.",
+      "g12": "Experimental results being discussed with the audience.",
+      "g13": "The research problem in the spotlight, at the start of a talk.",
+      "g14": "A talk given by two presenters, closing one of the papers.",
+      "g15": "Questions and discussion between the audience and the presenters.",
+      "g16": "Group photo on stage, at the end of one of the sessions."
+    }
+  },
+  "program": {
+    "eyebrow": "Programme",
+    "title": "The programme as it ran",
+    "text": "WCIA filled the morning of September 1, in two blocks and three thematic sessions. Full papers were given {fullTotal} minutes, {fullTalk} for the talk and {fullQuestions} for questions. Short papers were given {shortTotal} minutes, {shortTalk} for the talk and {shortQuestions} for questions.",
+    "sessionLabel": "Session {n}",
+    "continued": "continued",
+    "count": "{n} papers",
+    "opening": "WCIA opening",
+    "break": "Break",
+    "closing": "Closing and Best Paper award",
+    "fullTag": "Full",
+    "shortTag": "Short",
+    "typeNote": "The type of each paper follows the official list of accepted papers.",
+    "sourceNote": "Programme reproduced from the official WCIA page, retrieved on {date}.",
+    "error": "The programme could not be loaded. Please check the official WCIA page.",
+    "sessions": {
+      "sessao1": "Robustness, Security and AI Adoption",
+      "sessao2": "Security of AI Agents",
+      "sessao3": "LLM Security: Red Teaming, Robustness and Prompt Injection"
+    }
+  },
+  "papers": {
+    "eyebrow": "Program",
+    "title": "Accepted papers",
+    "text": "The papers accepted at WCIA 2026, in the order published by the workshop chairs. Every paper has a reserved slot for the paper PDF and for the presentation slides PDF.",
+    "fullTitle": "Full papers",
+    "shortTitle": "Short papers",
+    "groupCount": "{n} papers",
+    "assetsLabel": "Files for this paper",
+    "paperCta": "Paper PDF",
+    "slidesCta": "Slides PDF",
+    "paperSoon": "Paper coming soon",
+    "slidesSoon": "Slides coming soon",
+    "sourceNote": "List reproduced from the official WCIA page, retrieved on {date}. If the two ever disagree, the official page prevails.",
+    "sourceCta": "Open the official WCIA page",
+    "sourceHost": "sbseg2026.uff.br",
+    "error": "The list of papers could not be loaded. Please check the official WCIA page."
+  },
+  "stats": {
+    "eyebrow": "Numbers",
+    "title": "General statistics",
+    "text": "The outcome of the WCIA 2026 review process, run double-blind, with at least three independent reviews per paper.",
+    "submitted": "Papers submitted",
+    "accepted": "Papers accepted",
+    "rate": "Acceptance rate",
+    "pcMembers": "Program Committee members",
+    "authors": "Unique authors",
+    "institutions": "Institutions",
+    "ratioTitle": "Acceptance by paper type",
+    "fullLabel": "Full papers",
+    "shortLabel": "Short papers",
+    "submissions": "{n} submissions",
+    "acceptedSeg": "accepted",
+    "restSeg": "not accepted",
+    "rejectedOne": "rejected",
+    "rejectedMany": "rejected",
+    "withdrawnOne": "withdrawn",
+    "withdrawnMany": "withdrawn",
+    "barLabel": "{group}: {accepted} of {submitted} papers accepted, {rate}.",
+    "notes": [
+      "{reviewed} of the {submitted} submitted papers were actually reviewed.",
+      "{assignments} review assignments, with {done} reviews completed.",
+      "Every reviewed paper received at least {min} independent reviews.",
+      "{authors} unique authors, spread across {institutions} institutions.",
+      "{multi} submissions involved authors from more than one institution.",
+      "{high} papers scored a weighted average (WAvg) above {cut}."
+    ],
+    "error": "The statistics could not be loaded. Please check the official WCIA page."
+  },
+  "committee": {
+    "eyebrow": "Reviewing",
+    "title": "Program Committee",
+    "text": "The {listed} people who made up the WCIA 2026 Program Committee. Of these, {active} took an active part in the review process, with {assignments} review assignments and {done} completed reviews.",
+    "coordination": "WCIA chairs",
+    "generalCoordination": "SBSeg 2026 general chairs",
+    "ceseg": "CESEG coordination",
+    "membersTitle": "Members",
+    "error": "The Program Committee could not be loaded. Please check the official WCIA page."
+  },
+  "slidesCall": {
+    "eyebrow": "An invitation to authors",
+    "title": "Share the slides of your presentation",
+    "text": "At venues such as the USENIX Security Symposium, the paper and the presentation slides are published side by side, in open access. WCIA follows the same practice, and sharing your slides is voluntary.",
+    "items": [
+      "After your session, send the slides PDF to the WCIA chairs. The link then shows up on this page, next to your paper.",
+      "Send a PDF rather than the editable file: a PDF preserves fonts and layout on any computer.",
+      "Name the file with the presenter's last name and a fragment of the title, for example silva-red-teaming-slms.pdf.",
+      "Confirm with your co-authors that the version you send can be published, and remove any sensitive or unreleased data."
+    ],
+    "why": "Published slides widen the reach of the work, help those who could not attend the session, and serve as a reference for future editions of the workshop.",
+    "cta": "Email your slides",
+    "subject": "WCIA 2026: presentation slides",
+    "soon": "The address for submissions will be published here soon. Until then, please contact the WCIA chairs.",
+    "email": ""
+  },
+  "guides": {
+    "eyebrow": "Supporting material",
+    "title": "Presentation guidelines",
+    "text": "The material that guided the WCIA 2026 talks stays published, for the next editions and for anyone who wants to reuse it at other events."
+  },
+  "template": {
+    "eyebrow": "Slides",
+    "title": "WCIA slide template",
+    "text": "WCIA will have its own slide template, which will be suggested to the authors of accepted papers. The template can be copied, modified and used freely.",
+    "soon": "Coming soon. The link will be published here as soon as the template is available.",
+    "cta": "Open the slide template",
+    "url": ""
+  },
+  "timer": {
+    "eyebrow": "Tool",
+    "title": "Splitting your presentation time",
+    "text": "Your contribution is typically in the final part of the paper, so it deserves the largest share of the time. Enter the length of your slot to see the suggested split in minutes.",
+    "inputLabel": "Slot length",
+    "unit": "minutes",
+    "parts": [
+      {
+        "label": "Background",
+        "share": 30
+      },
+      {
+        "label": "Goal and problem statement",
+        "share": 15
+      },
+      {
+        "label": "Contribution, results and limitations",
+        "share": 45
+      },
+      {
+        "label": "Closing remarks, future work and acknowledgements",
+        "share": 10
+      }
+    ],
+    "toleranceTitle": "Acceptable time window",
+    "toleranceTarget": "Target in rehearsals, 5% tolerance",
+    "toleranceLimit": "Limit that must never be crossed, 10% tolerance",
+    "slidesHint": "Slide count reference, roughly one per minute, excluding the title and closing slides",
+    "slidesUnit": "slides",
+    "caption": "Percentages suggested by the original material. Question time is not included."
+  },
+  "demo": {
+    "eyebrow": "Comparison",
+    "title": "Transcribing the paper, or writing a headline",
+    "badLabel": "Avoid",
+    "goodLabel": "Prefer",
+    "bad": "The new XPTO system developed in this work achieved a performance that exceeded the best version in the literature by 30%.",
+    "good": "XPTO: 30% higher performance than the state of the art",
+    "caption": "The full sentence belongs in your speech. The slide keeps the headline."
+  },
+  "toc": "On this page",
+  "sections": [
+    {
+      "id": "gerais",
+      "eyebrow": "Part 1",
+      "title": "General advice",
+      "items": [
+        {
+          "text": "Use clean slides, preferably with a white background and black text."
+        },
+        {
+          "text": "Do not overdo the number of colors, except when it is absolutely necessary to distinguish data in charts."
+        },
+        {
+          "text": "Use color schemes with good contrast. Recommended reading:",
+          "links": [
+            {
+              "label": "Choosing colors for your presentation slides",
+              "url": "https://www.thinkoutsidetheslide.com/choosing-colors-for-your-presentation-slides/"
+            },
+            {
+              "label": "Psychology of color in PowerPoint presentations",
+              "url": "https://presentationteam.com/psychology-of-color-in-powerpoint-presentations/"
+            },
+            {
+              "label": "How to choose a color scheme",
+              "url": "https://visme.co/blog/how-to-choose-a-color-scheme/"
+            }
+          ]
+        },
+        {
+          "text": "Invest time and energy in the quality of the slide content."
+        },
+        {
+          "text": "Use the slides only as a guide for your speech, avoiding overloading them with information."
+        },
+        {
+          "text": "Do not simply read the slides out loud, since that gives a very poor impression of being unprepared. When the new slide appears, the content will already surface in your mind and you will be able to elaborate on it without reading."
+        },
+        {
+          "text": "Do not forget to look at the audience, this matters a great deal. The presentation is not for you, for the screen, for the computer, for the floor, for the ceiling or for the walls: it is for the audience. If you are shy, simply move your gaze from one part of the room to another, or slightly above people's heads, at a point at the back of the room."
+        },
+        {
+          "text": "Rehearse your presentation to make sure you respect the time set by the event, standing up and speaking out loud."
+        },
+        {
+          "text": "Number your slides, since that makes discussion and questions easier."
+        },
+        {
+          "text": "Go through several rounds of improvement on the slides. Like a good text, a good presentation demands work and cycles of refinement."
+        },
+        {
+          "text": "Take inspiration from good examples of other presentations."
+        },
+        {
+          "text": "Try breaking away from the classic structure. Instead of opening with the traditional outline slide, consider starting with strong motivation or a relevant problem. This often makes the presentation more engaging and fluid."
+        },
+        {
+          "text": "Remember that the purpose of a presentation is to let the audience grasp an idea and follow your arguments and line of reasoning. If that is not achieved by the end, the presentation has failed. Presenting a paper is the act of making the audience understand your arguments, not necessarily agree with the information presented."
+        }
+      ]
+    },
+    {
+      "id": "conteudo",
+      "eyebrow": "Part 2",
+      "title": "Content advice",
+      "items": [
+        {
+          "text": "How many slides? There is no single answer. Some people suggest around one slide per minute, but this varies with the content and with what you want to explain. Slides with a lot of text tend to consume more time and to be less engaging for the audience."
+        },
+        {
+          "text": "Avoid blocks of text, such as paragraphs and long sentences:",
+          "demo": "headline",
+          "children": [
+            "Prefer short, direct items that serve only as a guide for your speech.",
+            "Do not transcribe sentences or paragraphs from the paper onto the slides.",
+            "Avoid complete sentences with article, adjective, subject, preposition, verb and direct and indirect objects. That belongs in texts, not in slides.",
+            "The best way to deliver content simply and directly is to take inspiration from newspaper headlines, filling in the details in your speech, which can carry fuller and more explanatory sentences."
+          ]
+        },
+        {
+          "text": "Use large fonts, very large:",
+          "children": [
+            "Preferably 24pt or larger for slide content, images and tables.",
+            "Slide titles should be 32pt or larger.",
+            "Do not leave too much white space on your slides. White space usually means the fonts or figures could be larger and occupy prime space that is going unused.",
+            "Note that this does not mean filling the slide with excessive content."
+          ]
+        },
+        {
+          "text": "Use good images:",
+          "children": [
+            "Prefer meaningful, representative, high-quality images.",
+            "Favor vector or high-definition images, for example SVG, PNG and PDF.",
+            "If zooming in reveals blurry fonts or figures, or blocky artifacts, consider replacing them with a higher-definition or vector version.",
+            "Figures made by copying and pasting regions of the screen are the worst option and should be avoided."
+          ]
+        },
+        {
+          "text": "Improve how tables are presented:",
+          "children": [
+            "Rebuild complex tables so that they read clearly on slides.",
+            "You do not always need to show the full table, present only the most relevant data.",
+            "You do not always need to show every table and every data point from your paper. Explaining the most relevant data well and calmly beats rushing through everything in a way nobody follows.",
+            "Reveal tables and images progressively across slides, highlighting the parts being explained with circles, rectangles or arrows."
+          ]
+        },
+        {
+          "text": "Use simple techniques to highlight and gradually explain images and charts:",
+          "children": [
+            "For example, use a white or partially transparent rectangle to cover the parts of the image you will explain later, or spread the slide content across several slides, adding content on each new one.",
+            "It is very important to win and keep the audience's attention on the point you are explaining. If the slide holds a lot of information, text or figures, much of the audience may be trying to read and understand a different part from the one you are covering."
+          ]
+        },
+        {
+          "text": "Although recommended, a title on every slide is not mandatory:",
+          "children": [
+            "In some cases, enlarging the image or the table works better than adding a title."
+          ]
+        },
+        {
+          "text": "Avoid overloading the slides:",
+          "children": [
+            "Too much content, whether text or complex images and tables, distracts the audience. Choosing carefully what goes on each slide is essential. Less is more.",
+            "If several images share one slide, consider splitting them across more slides, so each one can be larger and clearer and the audience stays focused on the image you are explaining."
+          ]
+        },
+        {
+          "text": "Selectively choose the most relevant content to present within the available time:",
+          "children": [
+            "Focus on the problem, the solution, the challenges and the results.",
+            "Presenting a long context adds little and may cost you the audience's attention along the way.",
+            "You do not need to spend time justifying your research, it is enough to state clearly the problem being solved.",
+            "Spending much time on related work is not recommended."
+          ]
+        },
+        {
+          "text": "Number your slides. The numbering serves two main purposes:",
+          "children": [
+            "It helps the audience take notes and direct their questions more precisely.",
+            "It lets you, having rehearsed, control your pace and know whether you are on time, ahead or behind."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "preparacao",
+      "eyebrow": "Part 3",
+      "title": "Preparation advice",
+      "items": [
+        {
+          "text": "View your presentation on a mobile phone at 50 cm:",
+          "children": [
+            "If everything is legible and understandable, your slides are well prepared for different environments."
+          ]
+        },
+        {
+          "text": "Review the presentation content with your co-authors at least twice."
+        },
+        {
+          "text": "Plan your presentation within the time allotted to your slot at the event."
+        },
+        {
+          "text": "If you have questions about timing, contact the chair of your track or event."
+        },
+        {
+          "text": "Some people suggest preparing one slide per minute of presentation, excluding the opening and closing slides. The advice is good but should be taken with care, since it is more accurate for short presentations. In longer ones, people tend to relax and spend more than a minute per slide."
+        },
+        {
+          "text": "If you spend a long time, two minutes or more, on a single slide, it probably holds too much content and should be split into two or three. An audience finds it tedious to sit through a presentation whose slides barely change."
+        },
+        {
+          "text": "It is also bad to talk about many things the slide does not cover. The audience gets lost easily when the slide offers no support for what is being said. Do not read only what is on the slide, and do complement it with fuller sentences, but not to the point of delivering essential information by speech alone, without it appearing on the slide."
+        },
+        {
+          "text": "Respect, respect and respect the time allotted to you. In rehearsals, target a 5% tolerance on the allotted time, excluding question time, for finishing early or late. Session chairs usually tolerate slightly more when necessary, but we must never cross the 10% tolerance mark, over or under, during the presentation. We may lose the right to finish, or lose a great opportunity to get our message across."
+        },
+        {
+          "text": "One of the most common and awkward problems happens when the speaker does not finish within their time, forcing the session chair to interrupt before they have concluded, or when the speaker finishes far too early. The first case shows a certain disregard for the rules and a lack of respect for the organizers and the audience. The second shows disregard for the golden time granted and left unused."
+        },
+        {
+          "text": "Your contribution is typically in the final part of the paper, so it should take the largest share of the time. A good suggestion for splitting presentation time:",
+          "children": [
+            "Around 30% of the time for background.",
+            "Around 15% of the time for stating the goal or the problem.",
+            "Around 45% of the time for your contribution, chiefly discussion of results, limitations and contributions.",
+            "Around 10% for closing remarks, future work and acknowledgements."
+          ]
+        },
+        {
+          "text": "Rehearse the presentation at least five times, to help your brain:",
+          "children": [
+            "Retain the content.",
+            "Feel calmer.",
+            "Build a logical, natural sequence for the presentation."
+          ]
+        },
+        {
+          "text": "A lack of rehearsal is easily noticed by the audience, because the speaker:",
+          "children": [
+            "Stumbles over words.",
+            "Stops repeatedly to think about what to say.",
+            "Repeats things already said, believing a better way to explain what should already have been clear has been found.",
+            "Fails to deliver the paper's most relevant message within the available time.",
+            "May be interrupted before finishing, for exceeding the allotted time.",
+            "May run out of time for questions and discussion, which are among the most important goals and benefits of a presentation."
+          ]
+        },
+        {
+          "text": "Experience shows that only from the fifth or sixth rehearsal does the delivery become fluid, well organized, free of redundancy and easier to follow."
+        },
+        {
+          "text": "If you can, record video or audio of your rehearsals and listen to them some time later. You will notice points to improve that were not so clear during the recording."
+        }
+      ]
+    }
+  ],
+  "credits": {
+    "eyebrow": "Credits",
+    "title": "Contributors",
+    "people": "Diego Kreutz (UNIPAMPA), Marco A. Amaral Henriques (UNICAMP), Charles Christian Miers (UDESC), Cintia Borges Margi (USP), Rodrigo Brandão Mansilha (UNIPAMPA)",
+    "originPrefix": "Material originally produced for SBSeg 2024 and adapted for WCIA / SBSeg 2026.",
+    "originLink": "See the original SBSeg 2024 version"
+  },
+  "footer": {
+    "workshop": "Workshop on AI Cybersecurity",
+    "event": "XXVI Brazilian Symposium on Cybersecurity, SBSeg 2026",
+    "place": "Armação dos Búzios, RJ, Brazil, September 1 to 4, 2026",
+    "coordination": "WCIA coordination",
+    "coordinators": "Victor Hayashi (USP), Oscar Paiva (Bradesco), Diego Kreutz (UNIPAMPA), Rodrigo Sanches Miani (UFU)",
+    "officialLink": "Official WCIA page",
+    "solLink": "Proceedings on SBC-OpenLib"
+  },
+  "noscript": "This site uses JavaScript to load content in three languages. With JavaScript disabled, please refer to the official WCIA page."
+}

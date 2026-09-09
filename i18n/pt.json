@@ -1,0 +1,474 @@
+{
+  "code": "pt",
+  "meta": {
+    "title": "WCIA 2026 · A primeira edição · Workshop de Cibersegurança em IA",
+    "description": "Retrospectiva da primeira edição do Workshop de Cibersegurança em IA (WCIA), no SBSeg 2026: vídeo de encerramento, galeria do evento, programação realizada, artigos aceitos e estatísticas."
+  },
+  "nav": {
+    "skip": "Ir para o conteúdo",
+    "brand": "WCIA",
+    "brandFull": "Workshop de Cibersegurança em IA",
+    "official": "Página oficial",
+    "langLabel": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "SBSeg 2026 · Armação dos Búzios, RJ · 01 a 04 de setembro",
+    "title": "A primeira edição do WCIA foi um sucesso",
+    "subtitle": "Workshop de Cibersegurança em IA, no SBSeg 2026",
+    "lede": "Foram 48 artigos submetidos, 16 aceitos, três sessões temáticas e uma sala cheia da abertura ao encerramento. Esta página reúne o vídeo de encerramento, a galeria do evento, a programação realizada, os artigos aceitos e as estatísticas do processo de avaliação.",
+    "note": "Obrigado a quem submeteu, revisou, apresentou e assistiu."
+  },
+  "thanks": {
+    "eyebrow": "Agradecimentos",
+    "title": "Um agradecimento especial",
+    "lede": "Uma primeira edição não acontece por decreto. Ela acontece porque um conjunto de pessoas decide, ao mesmo tempo, que o assunto merece um espaço próprio. O WCIA 2026 foi exatamente isso, e é a essas pessoas que o workshop agradece.",
+    "groups": [
+      {
+        "title": "Às pessoas autoras",
+        "text": "135 autores, de 39 instituições, confiaram um trabalho a um workshop que ainda não tinha primeira edição. Foram 48 submissões, e a régua do programa é mérito de todas elas, inclusive das que não foram aceitas desta vez. Voltem na próxima."
+      },
+      {
+        "title": "Ao Comitê de Programa",
+        "text": "Foram 159 atribuições de revisão e 144 revisões concluídas, em revisão duplo-cega e com pelo menos três pareceres independentes por artigo avaliado, tudo dentro de um calendário curto. A qualidade do programa começou aí, num trabalho voluntário e pouco visível."
+      },
+      {
+        "title": "A quem apresentou",
+        "text": "Dezesseis apresentações em três sessões, com perguntas e discussão em todas elas. Obrigado por prepararem apresentações à altura dos artigos e por respeitarem o tempo, o que manteve a manhã inteira no horário."
+      },
+      {
+        "title": "A quem assistiu",
+        "text": "A sala ficou cheia do começo ao fim, num workshop de manhã. Não existe programa que se sustente sem plateia, e a do WCIA participou o tempo todo, com perguntas que continuaram no corredor depois de cada sessão."
+      },
+      {
+        "title": "À organização do SBSeg 2026 e à CESEG",
+        "text": "Pelo acolhimento da proposta de um workshop novo, pela estrutura em Armação dos Búzios e pelo apoio que tornou possível a primeira edição."
+      }
+    ],
+    "closingNote": "Até a próxima edição. A cibersegurança em IA já tem, no Brasil, comunidade, agenda e método."
+  },
+  "closing": {
+    "eyebrow": "Vídeo",
+    "title": "Vídeo de encerramento do WCIA 2026",
+    "text": "Uma retrospectiva de pouco mais de um minuto e meio da primeira edição: a abertura, as três sessões, os números do processo de avaliação e o encerramento.",
+    "version": "Primeira versão, publicada em {date}.",
+    "meta": "{duration} · MP4 · {size}",
+    "download": "Baixar o vídeo",
+    "fallback": "O seu navegador não reproduz vídeo em HTML5. Use o link de download abaixo para assistir ao vídeo."
+  },
+  "gallery": {
+    "eyebrow": "Galeria",
+    "title": "A primeira edição em imagens",
+    "text": "Uma seleção das melhores fotos e dos melhores clipes do dia, a partir do material registrado por quem estava na sala. Toque em qualquer imagem para ampliar.",
+    "videoBadge": "Vídeo",
+    "open": "Ampliar",
+    "close": "Fechar",
+    "prev": "Anterior",
+    "next": "Próxima",
+    "counter": "{n} de {total}",
+    "dialogLabel": "Galeria do WCIA 2026",
+    "credit": "Fotos e vídeos registrados por participantes do WCIA 2026.",
+    "error": "Não foi possível carregar a galeria.",
+    "captions": {
+      "g01": "A coordenação do WCIA na abertura da primeira edição do workshop.",
+      "g02": "Abertura do WCIA 2026, na manhã de 1º de setembro.",
+      "g03": "Sala cheia para a primeira sessão de apresentações.",
+      "g04": "A sala do WCIA durante uma das sessões da manhã.",
+      "g05": "Apresentação de artigo completo, com a plateia acompanhando.",
+      "v01": "Trecho de uma das apresentações, já na rodada de perguntas.",
+      "g06": "Can LLMs Explain AI? A Study of Explainable AI in Cybersecurity Machine Learning Models.",
+      "g07": "Beyond Guardrails: Tracing Policy, Authority, and Effects in Local LLM Agents.",
+      "g08": "From Implicit Trust to Continuous Verification: A Position on the Authorization of AI Agents in Production Services.",
+      "g09": "Evaluating the Robustness of Small Language Models in Portuguese under Red Teaming with Linguistic Perturbations.",
+      "g10": "A Cross-Lingual Security Evaluation of Prompt Injection Defenses in Small Language Models.",
+      "g11": "Detalhamento da metodologia de um dos trabalhos apresentados.",
+      "v02": "A sala durante a apresentação de Avaliação de Táticas de Red Teaming Automatizado em Modelos de Linguagem de Pequeno Porte.",
+      "g12": "Resultados experimentais em discussão com a plateia.",
+      "g13": "O problema de pesquisa em destaque, no início de uma apresentação.",
+      "g14": "Apresentação em dupla, no encerramento de um dos trabalhos.",
+      "g15": "Perguntas e discussão entre a plateia e quem apresentou.",
+      "g16": "Foto de grupo no palco, ao final de uma das sessões."
+    }
+  },
+  "program": {
+    "eyebrow": "Programação",
+    "title": "A programação realizada",
+    "text": "O WCIA ocupou a manhã de 1º de setembro, em dois blocos e três sessões temáticas. Artigos completos tiveram {fullTotal} minutos, sendo {fullTalk} de apresentação e {fullQuestions} de perguntas. Artigos curtos tiveram {shortTotal} minutos, sendo {shortTalk} de apresentação e {shortQuestions} de perguntas.",
+    "sessionLabel": "Sessão {n}",
+    "continued": "continuação",
+    "count": "{n} trabalhos",
+    "opening": "Abertura do WCIA",
+    "break": "Intervalo",
+    "closing": "Encerramento e premiação de Melhor Artigo",
+    "fullTag": "Completo",
+    "shortTag": "Curto",
+    "typeNote": "O tipo de cada trabalho segue a lista oficial de artigos aceitos.",
+    "sourceNote": "Programação reproduzida da página oficial do WCIA, consultada em {date}.",
+    "error": "Não foi possível carregar a programação. Consulte a página oficial do WCIA.",
+    "sessions": {
+      "sessao1": "Robustez, Segurança e Adoção de IA",
+      "sessao2": "Segurança de Agentes de IA",
+      "sessao3": "Segurança de LLMs: Red Teaming, Robustez e Prompt Injection"
+    }
+  },
+  "papers": {
+    "eyebrow": "Programa",
+    "title": "Artigos aceitos",
+    "text": "Os artigos aceitos no WCIA 2026, na ordem publicada pela coordenação do workshop. Cada artigo tem um espaço reservado para o PDF do trabalho e para o PDF dos slides da apresentação.",
+    "fullTitle": "Artigos completos",
+    "shortTitle": "Artigos curtos",
+    "groupCount": "{n} artigos",
+    "assetsLabel": "Arquivos deste artigo",
+    "paperCta": "PDF do artigo",
+    "slidesCta": "PDF dos slides",
+    "paperSoon": "Artigo em breve",
+    "slidesSoon": "Slides em breve",
+    "sourceNote": "Lista reproduzida da página oficial do WCIA, consultada em {date}. Em caso de divergência, vale a página oficial.",
+    "sourceCta": "Abrir a página oficial do WCIA",
+    "sourceHost": "sbseg2026.uff.br",
+    "error": "Não foi possível carregar a lista de artigos. Consulte a página oficial do WCIA."
+  },
+  "stats": {
+    "eyebrow": "Números",
+    "title": "Estatísticas gerais",
+    "text": "Resultado do processo de avaliação do WCIA 2026, em revisão duplo-cega, com pelo menos três revisões independentes por artigo.",
+    "submitted": "Artigos submetidos",
+    "accepted": "Artigos aceitos",
+    "rate": "Taxa de aceitação",
+    "pcMembers": "Membros do Comitê de Programa",
+    "authors": "Autores únicos",
+    "institutions": "Instituições",
+    "ratioTitle": "Aceitação por tipo de artigo",
+    "fullLabel": "Artigos completos",
+    "shortLabel": "Artigos curtos",
+    "submissions": "{n} submissões",
+    "acceptedSeg": "aceitos",
+    "restSeg": "não aceitos",
+    "rejectedOne": "rejeitado",
+    "rejectedMany": "rejeitados",
+    "withdrawnOne": "retirado",
+    "withdrawnMany": "retirados",
+    "barLabel": "{group}: {accepted} de {submitted} artigos aceitos, {rate}.",
+    "notes": [
+      "{reviewed} dos {submitted} artigos submetidos foram efetivamente avaliados.",
+      "{assignments} atribuições de revisão, com {done} revisões concluídas.",
+      "Todos os artigos avaliados receberam pelo menos {min} revisões independentes.",
+      "{authors} autores únicos, distribuídos em {institutions} instituições.",
+      "{multi} submissões envolveram autores de múltiplas instituições.",
+      "{high} artigos obtiveram média ponderada das avaliações (WAvg) superior a {cut}."
+    ],
+    "error": "Não foi possível carregar as estatísticas. Consulte a página oficial do WCIA."
+  },
+  "committee": {
+    "eyebrow": "Revisão",
+    "title": "Comitê de Programa",
+    "text": "As {listed} pessoas que formaram o Comitê de Programa do WCIA 2026. Destas, {active} participaram efetivamente da avaliação, com {assignments} atribuições de revisão e {done} revisões concluídas.",
+    "coordination": "Coordenação do WCIA",
+    "generalCoordination": "Coordenação Geral do SBSeg 2026",
+    "ceseg": "Coordenação da CESEG",
+    "membersTitle": "Membros",
+    "error": "Não foi possível carregar o Comitê de Programa. Consulte a página oficial do WCIA."
+  },
+  "slidesCall": {
+    "eyebrow": "Convite às pessoas autoras",
+    "title": "Envie os slides da sua apresentação",
+    "text": "Em eventos como o USENIX Security Symposium, o artigo e os slides da apresentação ficam publicados lado a lado, em acesso aberto. O WCIA adota a mesma prática, e o envio dos slides é voluntário.",
+    "items": [
+      "Depois da sua sessão, envie o PDF dos slides à coordenação do WCIA. O link passa a aparecer nesta página, junto do seu artigo.",
+      "Envie em PDF, e não no formato de edição: o PDF preserva as fontes e o layout em qualquer computador.",
+      "Nomeie o arquivo com o sobrenome de quem apresentou e um trecho do título, por exemplo silva-red-teaming-slms.pdf.",
+      "Confirme com as pessoas coautoras que a versão enviada pode ser publicada e retire dados sensíveis ou ainda não divulgados."
+    ],
+    "why": "Slides publicados ampliam o alcance do trabalho, ajudam quem não pôde assistir à sessão e servem de referência para as próximas edições do workshop.",
+    "cta": "Enviar os slides por e-mail",
+    "subject": "WCIA 2026: slides da apresentação",
+    "soon": "O endereço para envio será publicado aqui em breve. Até lá, procure a coordenação do WCIA.",
+    "email": ""
+  },
+  "guides": {
+    "eyebrow": "Material de apoio",
+    "title": "Sugestões para as apresentações",
+    "text": "O material que orientou as apresentações do WCIA 2026 continua publicado, para as próximas edições e para quem quiser reaproveitá-lo em outros eventos."
+  },
+  "template": {
+    "eyebrow": "Slides",
+    "title": "Template de slides do WCIA",
+    "text": "O WCIA terá um template de slides próprio, que será sugerido às pessoas autoras dos trabalhos aceitos. O template poderá ser copiado, modificado e usado livremente.",
+    "soon": "Em breve. O link será publicado aqui assim que o template estiver disponível.",
+    "cta": "Abrir o template de slides",
+    "url": ""
+  },
+  "timer": {
+    "eyebrow": "Ferramenta",
+    "title": "Divisão do tempo da apresentação",
+    "text": "Tipicamente a sua contribuição está na parte final do artigo, logo essa deve ser a maior parte do tempo. Informe a duração do seu slot para ver a divisão sugerida em minutos.",
+    "inputLabel": "Duração do slot",
+    "unit": "minutos",
+    "parts": [
+      {
+        "label": "Fundamentação",
+        "share": 30
+      },
+      {
+        "label": "Objetivo e problema",
+        "share": 15
+      },
+      {
+        "label": "Contribuição, resultados e limitações",
+        "share": 45
+      },
+      {
+        "label": "Considerações, trabalhos futuros e agradecimentos",
+        "share": 10
+      }
+    ],
+    "toleranceTitle": "Janela de tempo aceitável",
+    "toleranceTarget": "Meta nos ensaios, tolerância de 5%",
+    "toleranceLimit": "Limite que não deve ser ultrapassado, tolerância de 10%",
+    "slidesHint": "Referência de quantidade de slides, cerca de um por minuto, excluindo capa e encerramento",
+    "slidesUnit": "slides",
+    "caption": "Percentuais sugeridos pelo material original. O tempo de perguntas não está incluído."
+  },
+  "demo": {
+    "eyebrow": "Comparação",
+    "title": "Transcrição do artigo ou manchete",
+    "badLabel": "Evite",
+    "goodLabel": "Prefira",
+    "bad": "O novo sistema XPTO desenvolvido neste trabalho teve um desempenho que superou em 30% a melhor versão da literatura.",
+    "good": "XPTO: desempenho 30% superior ao estado da arte",
+    "caption": "A frase completa vai na sua fala. O slide fica com a manchete."
+  },
+  "toc": "Nesta página",
+  "sections": [
+    {
+      "id": "gerais",
+      "eyebrow": "Parte 1",
+      "title": "Dicas gerais",
+      "items": [
+        {
+          "text": "Utilize slides clean, preferencialmente com fundo branco e texto preto."
+        },
+        {
+          "text": "Não exagere na quantidade de cores, exceto se for absolutamente necessário para diferenciar dados em gráficos."
+        },
+        {
+          "text": "Use esquemas de cores que tenham bom contraste. Leitura recomendada:",
+          "links": [
+            {
+              "label": "Choosing colors for your presentation slides",
+              "url": "https://www.thinkoutsidetheslide.com/choosing-colors-for-your-presentation-slides/"
+            },
+            {
+              "label": "Psychology of color in PowerPoint presentations",
+              "url": "https://presentationteam.com/psychology-of-color-in-powerpoint-presentations/"
+            },
+            {
+              "label": "How to choose a color scheme",
+              "url": "https://visme.co/blog/how-to-choose-a-color-scheme/"
+            }
+          ]
+        },
+        {
+          "text": "Dedique tempo e energia à qualificação do conteúdo dos slides."
+        },
+        {
+          "text": "Use os slides apenas como um guia para sua fala, evitando sobrecarregá-los com informações."
+        },
+        {
+          "text": "Não fique só lendo os slides, pois isso passa uma impressão muito ruim de despreparo. Ao ver o novo slide, o conteúdo já despontará na sua cabeça e você poderá elaborar sobre ele sem precisar ficar lendo."
+        },
+        {
+          "text": "Não deixe de olhar para o público, isso é muito importante. A apresentação não é para você, para a tela, para o computador, para o chão, para o teto e nem para as paredes: é para o público. Se for tímido ou tímida, basta ficar mudando o olhar de um lugar para outro da plateia, ou um pouquinho acima da cabeça das pessoas, em um ponto no fundo da sala."
+        },
+        {
+          "text": "Treine sua apresentação para garantir que você respeite o tempo estabelecido pelo evento, em pé e falando alto."
+        },
+        {
+          "text": "Inclua numeração nos slides, pois isso facilita discussões e perguntas."
+        },
+        {
+          "text": "Faça várias iterações de melhoria nos slides. Assim como um bom texto, uma boa apresentação demanda trabalho e ciclos de refinamento."
+        },
+        {
+          "text": "Inspire-se em bons exemplos de outras apresentações."
+        },
+        {
+          "text": "Experimente fugir do clássico. Em vez de começar com o tradicional slide de roteiro, considere iniciar com uma motivação forte ou uma problemática relevante. Muitas vezes isso torna a apresentação mais envolvente e fluida."
+        },
+        {
+          "text": "Lembre-se de que a finalidade de uma apresentação é fazer com que quem está assistindo compreenda uma ideia e consiga entender os seus argumentos e a sua linha de raciocínio. Se ao final da apresentação isso não for atingido, então a apresentação foi falha. Apresentar um trabalho é um ato de fazer a plateia entender os seus argumentos, não necessariamente concordar com as informações apresentadas."
+        }
+      ]
+    },
+    {
+      "id": "conteudo",
+      "eyebrow": "Parte 2",
+      "title": "Dicas de conteúdo",
+      "items": [
+        {
+          "text": "Quantos slides fazer? Não há uma resposta única. Algumas pessoas falam em torno de um slide por minuto, porém isso varia de acordo com o conteúdo e com o que se deseja explicar. Slides com muito texto tendem a consumir mais tempo e a ser menos motivacionais para a plateia."
+        },
+        {
+          "text": "Evite blocos de texto, como parágrafos e frases longas:",
+          "demo": "headline",
+          "children": [
+            "Prefira itens curtos e diretos, que sirvam apenas como guia para sua fala.",
+            "Não faça transcrição de sentenças ou parágrafos do texto para os slides.",
+            "Evite sentenças completas com artigo, adjetivo, sujeito, preposição, verbo e objetos direto e indireto. Isso é para textos, não para slides.",
+            "A melhor forma de passar o conteúdo de maneira simples e direta é se inspirar em manchetes de jornal, complementando os detalhes na sua fala, que pode conter sentenças mais completas e explicativas."
+          ]
+        },
+        {
+          "text": "Use fontes grandes, muito grandes:",
+          "children": [
+            "Preferencialmente 24pt ou maior para o conteúdo dos slides, imagens e tabelas.",
+            "Títulos dos slides devem ter 32pt ou mais.",
+            "Não deixe muito espaço em branco nos slides. Se há espaço em branco, é porque as fontes ou as figuras poderiam ser maiores e ocupar um espaço nobre que não está sendo aproveitado.",
+            "Observe que isso não significa encher o slide com conteúdo excessivo."
+          ]
+        },
+        {
+          "text": "Utilize boas imagens:",
+          "children": [
+            "Prefira imagens significativas, representativas e de alta qualidade.",
+            "Dê preferência a imagens vetoriais ou de alta definição, por exemplo SVG, PNG e PDF.",
+            "Se, ao aplicar zoom, o slide apresenta fontes ou figuras borradas ou com artefatos quadriculados, considere trocar por uma versão de mais alta definição ou vetorial.",
+            "Figuras baseadas em copiar e colar regiões de tela são as piores alternativas e devem ser evitadas."
+          ]
+        },
+        {
+          "text": "Melhore a apresentação das tabelas:",
+          "children": [
+            "Reconstrua tabelas complexas para que fiquem mais claras nos slides.",
+            "Nem sempre é necessário mostrar a tabela completa, apresente apenas os dados mais relevantes.",
+            "Nem sempre é necessário mostrar todas as tabelas e dados do artigo. É melhor explicar bem e com calma os dados mais relevantes do que tentar mostrar tudo de forma corrida e pouco compreensível.",
+            "Exiba tabelas e imagens de forma progressiva nos slides, destacando com círculos, retângulos ou setas as partes que estão sendo explicadas."
+          ]
+        },
+        {
+          "text": "Use técnicas simples para destacar e explicar gradualmente imagens e gráficos:",
+          "children": [
+            "Por exemplo, use um retângulo branco ou parcialmente transparente para cobrir partes da imagem que serão explicadas depois, ou distribua o conteúdo do slide em vários outros, acrescentando conteúdo a cada novo slide.",
+            "É muito importante conquistar e manter cativa a atenção do público para o ponto que está sendo explicado. Se o slide tiver muita informação, texto ou figuras, boa parte do público poderá estar tentando ler e entender partes diferentes da que você está explicando."
+          ]
+        },
+        {
+          "text": "Apesar de recomendável, não é obrigatório colocar títulos em todos os slides:",
+          "children": [
+            "Em alguns casos, aumentar o tamanho da imagem ou da tabela pode ser mais eficaz do que incluir um título."
+          ]
+        },
+        {
+          "text": "Evite sobrecarregar os slides:",
+          "children": [
+            "Muito conteúdo, seja em forma de texto ou de imagens e tabelas complexas, pode distrair o público. É fundamental selecionar cuidadosamente o que será apresentado em cada slide. Menos é mais.",
+            "Se há várias imagens em um mesmo slide, considere dividi-las em mais slides, a fim de aumentar o tamanho e a inteligibilidade delas e de manter o foco do público na imagem que está sendo explicada."
+          ]
+        },
+        {
+          "text": "Escolha seletivamente o conteúdo mais relevante a apresentar dentro do tempo disponível:",
+          "children": [
+            "Foque no problema, na solução, nos desafios e nos resultados.",
+            "Apresentar um contexto longo é pouco relevante e pode custar a atenção do público no meio do caminho.",
+            "Não é necessário gastar tempo justificando a sua pesquisa, basta apresentar claramente o problema que está sendo resolvido.",
+            "É recomendado não gastar muito tempo nos trabalhos relacionados."
+          ]
+        },
+        {
+          "text": "Procure enumerar os seus slides. A numeração tem dois propósitos principais:",
+          "children": [
+            "Facilitar que a plateia faça anotações e direcione melhor as perguntas.",
+            "Permitir que você, tendo treinado, controle o tempo e saiba se está no ritmo correto, adiantado ou atrasado."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "preparacao",
+      "eyebrow": "Parte 3",
+      "title": "Dicas de preparação",
+      "items": [
+        {
+          "text": "Visualize sua apresentação em um celular a 50 cm de distância:",
+          "children": [
+            "Se tudo estiver legível e compreensível, seus slides estarão bem preparados para diferentes ambientes."
+          ]
+        },
+        {
+          "text": "Realize pelo menos duas revisões do conteúdo da apresentação com seus coautores."
+        },
+        {
+          "text": "Planeje sua apresentação dentro do tempo estipulado no slot da sua apresentação no evento."
+        },
+        {
+          "text": "Se tiver dúvidas sobre o tempo, contate o chair da sua trilha ou evento."
+        },
+        {
+          "text": "Algumas pessoas sugerem preparar um slide por minuto de apresentação, excluindo as capas inicial e final. A dica é boa, mas deve ser tomada com cuidado, pois é mais precisa para apresentações curtas. Nas mais longas, as pessoas acabam relaxando e gastando mais de um minuto por slide."
+        },
+        {
+          "text": "Se ficar muito tempo, dois minutos ou mais, falando de um mesmo slide, provavelmente ele está com conteúdo demais e deve ser dividido em dois ou três outros. É muito maçante para o público ouvir uma apresentação que quase não troca o slide."
+        },
+        {
+          "text": "Também não é nada bom falar de um monte de coisas que não estão cobertas pelo slide. O público fica facilmente perdido se não encontra no slide o suporte para o que está sendo dito. Não é para ficar lendo só o que está no slide, e é sempre bom complementar com frases mais elaboradas, mas não ao ponto de passar informações fundamentais apenas pela fala, sem que estejam presentes no slide."
+        },
+        {
+          "text": "Respeite, respeite e respeite o tempo que lhe foi alocado. Tenha como meta nos ensaios uma tolerância de 5% do tempo alocado, sem incluir tempo de perguntas, para terminar antes ou depois do prazo. Normalmente os presidentes de sessão toleram um pouco mais que isso, se necessário, mas jamais devemos ultrapassar a marca de 10% de tolerância, para mais ou para menos, no momento da apresentação. Podemos perder o direito a concluir ou perder uma ótima oportunidade de passar nosso recado."
+        },
+        {
+          "text": "Um dos problemas mais comuns e constrangedores ocorre quando a pessoa não termina ao final do seu tempo, obrigando o presidente da sessão a interrompê-la sem que ela tenha concluído, ou quando termina muito antes do tempo alocado. O primeiro caso mostra um certo desprezo pelas regras e um desrespeito aos organizadores e ao público. O segundo mostra desprezo pelo tempo, de ouro, que lhe foi concedido e não foi aproveitado."
+        },
+        {
+          "text": "Tipicamente a sua contribuição está na parte final do artigo, logo essa deve ser a maior parte do tempo. Uma boa sugestão de divisão do tempo da apresentação:",
+          "children": [
+            "Em torno de 30% do tempo para a fundamentação.",
+            "Em torno de 15% do tempo para a definição do objetivo ou do problema.",
+            "Em torno de 45% do tempo para sua contribuição, principalmente discussão de resultados, limitações e contribuições.",
+            "Em torno de 10% para considerações, trabalhos futuros e agradecimentos."
+          ]
+        },
+        {
+          "text": "Treine pelo menos cinco vezes a apresentação, para ajudar seu cérebro a:",
+          "children": [
+            "Fixar o conteúdo.",
+            "Ficar mais tranquilo.",
+            "Criar uma sequência lógica e natural para a apresentação."
+          ]
+        },
+        {
+          "text": "A falta de ensaios é facilmente percebida pelo público, pois quem apresenta:",
+          "children": [
+            "Gagueja.",
+            "Para muitas vezes para pensar no que vai falar.",
+            "Repete coisas já faladas, por achar que encontrou uma forma melhor de explicar o que já deveria ter ficado claro antes.",
+            "Não consegue passar a mensagem mais relevante do artigo dentro do tempo disponível.",
+            "Pode ser interrompido antes de terminar, por exceder o tempo alocado.",
+            "Pode ficar sem tempo para perguntas e discussões, que são alguns dos objetivos e benefícios mais importantes de uma apresentação."
+          ]
+        },
+        {
+          "text": "A experiência mostra que somente a partir do quinto ou sexto ensaio o discurso da apresentação fica fluido, bem organizado, sem redundâncias e mais fácil de acompanhar."
+        },
+        {
+          "text": "Se puder, grave vídeo ou áudio dos seus ensaios e ouça algum tempo depois. Você perceberá pontos a melhorar que não ficaram tão claros durante a gravação."
+        }
+      ]
+    }
+  ],
+  "credits": {
+    "eyebrow": "Créditos",
+    "title": "Colaboradores",
+    "people": "Diego Kreutz (UNIPAMPA), Marco A. Amaral Henriques (UNICAMP), Charles Christian Miers (UDESC), Cintia Borges Margi (USP), Rodrigo Brandão Mansilha (UNIPAMPA)",
+    "originPrefix": "Material originalmente produzido para o SBSeg 2024 e adaptado para o WCIA / SBSeg 2026.",
+    "originLink": "Ver a versão original do SBSeg 2024"
+  },
+  "footer": {
+    "workshop": "Workshop de Cibersegurança em IA",
+    "event": "XXVI Simpósio Brasileiro de Cibersegurança, SBSeg 2026",
+    "place": "Armação dos Búzios, RJ, 01 a 04 de setembro de 2026",
+    "coordination": "Coordenação do WCIA",
+    "coordinators": "Victor Hayashi (USP), Oscar Paiva (Bradesco), Diego Kreutz (UNIPAMPA), Rodrigo Sanches Miani (UFU)",
+    "officialLink": "Página oficial do WCIA",
+    "solLink": "Anais na SBC-OpenLib"
+  },
+  "noscript": "Este site usa JavaScript para carregar o conteúdo nos três idiomas. Com o JavaScript desativado, consulte a página oficial do WCIA."
+}

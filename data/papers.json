@@ -1,0 +1,154 @@
+{
+  "_comment": "Dados que não são traduzidos: títulos, autoria, contagens e URLs. Reproduzidos da página oficial do WCIA. Para publicar um PDF, preencha paperUrl ou slidesUrl do artigo correspondente.",
+  "source": "https://www.sbseg2026.uff.br/workshops/wcia/",
+  "collected": "2026-09-09",
+
+  "stats": {
+    "submitted": 48,
+    "reviewed": 47,
+    "full":  { "submitted": 37, "accepted": 12, "rejected": 24, "withdrawn": 1 },
+    "short": { "submitted": 11, "accepted": 4,  "rejected": 7,  "withdrawn": 0 },
+    "pcMembers": 45,
+    "pcListed": 49,
+    "assignments": 159,
+    "reviewsDone": 144,
+    "minReviews": 3,
+    "authors": 135,
+    "institutions": 39,
+    "multiInstitution": 21,
+    "highWavg": 2,
+    "highWavgCut": 8.0
+  },
+
+  "papers": [
+    {
+      "id": "f1",
+      "type": "full",
+      "title": "A Cross-Lingual Security Evaluation of Prompt Injection Defenses in Small Language Models",
+      "authors": "Pedro Filho (Universidade de São Paulo/ICMC), Erikson Júlio de Aguiar (USP), Agma Juci Traina (USP)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f2",
+      "type": "full",
+      "title": "A Synthetic Benchmark for Integrated Security Assessment of RAG-Based Corporate Assistants",
+      "authors": "Larissa de Oliveira Figueira (Facti – Fundação de Apoio à Capacitação em Tecnologia da Informação), Luiz Duarte (FacTI), Rafael Silva (Facti – Fundação de Apoio à Capacitação em Tecnologia da Informação)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f3",
+      "type": "full",
+      "title": "AI, Fill This Form: A Simple and Effective Data Exfiltration Attack on LLM-Based Browser Extensions Without Prompt Injection",
+      "authors": "Victor Garcia dos Santos, Victor Takashi Hayashi (Universidade de São Paulo, USP), Routo Terada (University of São Paulo), Bryan Kano Ferreira (INTELI)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f4",
+      "type": "full",
+      "title": "Avaliação de Táticas de Red Teaming Automatizado em Modelos de Linguagem de Pequeno Porte (SLMs)",
+      "authors": "Martony Demes Silva (UFPI), Guilherme Henrique Vieira de Alencar (IFPI), Cleonildo Macedo (UFPI)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f5",
+      "type": "full",
+      "title": "Beyond Attack Success Rate: Representing Consistency in Evading the NIDS Feature-Space",
+      "authors": "Allan Espindola (Pontifícia Universidade Católica do Paraná PUCPR), Altair Olivo Santin (PUCPR), Eduardo Kugler Viegas (Pontifícia Universidade Católica do Paraná, PUC-PR), Pedro Ferreira (FCUL), Antonio Casimiro",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f6",
+      "type": "full",
+      "title": "Beyond Guardrails: Tracing Cross-Layer Evidence in Local LLM-Agent Execution",
+      "authors": "Larissa Silva (IComp/UFAM), Eduardo Luzeiro Feitosa (UFAM), Rafael Castilho (IComp/UFAM)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f7",
+      "type": "full",
+      "title": "Can LLMs Explain AI? A Study of Explainable AI in Cybersecurity Machine Learning Models",
+      "authors": "Elton Freitas (UFC), Beloin Rodrigues, Emanuel B. Rodrigues (UFC), Rossana Maria de Castro Andrade (UFC), Dario Vieira (EFREI), Larisse Lucas, Oracio Melo (UFC), George Fernandes (UFC), Miguel Franklin de Castro (UFC)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f8",
+      "type": "full",
+      "title": "Evaluating the Robustness of Small Language Models in Portuguese under Red Teaming with Linguistic Perturbations",
+      "authors": "Carlos Bunn (UDESC), Matheus Azevedo de Sá (UDESC), Milton Pagliuso (UDESC), Charles Christian Miers (UDESC), Marcos Antonio Simplicio Jr (USP)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f9",
+      "type": "full",
+      "title": "Jogos de Sinalização para Agentes de IA Comprometidos",
+      "authors": "Lucila Maria de Souza Bento (UERJ), Davidson Boccardo (Hospital Albert Einstein)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f10",
+      "type": "full",
+      "title": "Método Reprodutível para Avaliar a Resiliência de Agentes LLM a Ataques de Injeção Indireta de Prompt",
+      "authors": "Marcos Paulo Pereira da Silva (Universidade de Brasília, UnB), Eric Hans Messias, João Gondim (UnB), Laerte Peotta (Universidade de Brasília, UnB)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f11",
+      "type": "full",
+      "title": "Robustez de LLMs na Detecção de Vulnerabilidades em Contratos Inteligentes com Transformações no Código",
+      "authors": "Rafael Alves (UNICAMP), Marco Amaral Henriques (UNICAMP)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "f12",
+      "type": "full",
+      "title": "Um Framework Metodológico para Avaliação de Segurança em Código Gerado por LLMs",
+      "authors": "Augusto César Graeml (UTFPR), Thiago Jesus (UTFPR), Daniel Pigatto (UTFPR), Juliana de Santi (UTFPR), Ana Cristina B. Kochem Vendramin (UTFPR)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+
+    {
+      "id": "s1",
+      "type": "short",
+      "title": "Além da Segurança do Modelo: Prontidão Institucional para a Adoção Segura de Inteligência Artificial no Setor Público",
+      "authors": "Alessandro Ribeiro (INSS), Maxwell Sarmento Carvalho (Universidade de Brasília, UnB), Daniela de Oliveira Moraes",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "s2",
+      "type": "short",
+      "title": "Adversarial Attacks as a Diagnostic Tool for a Mining Detection Network in the Brazilian Legal Amazon",
+      "authors": "Leonardo Fajardo Grupioni (USP), Gabriel Stephano Santos (USP), Paulo Sérgio Cugnasca (University of São Paulo), Felipe Valencia de Almeida (USP)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "s3",
+      "type": "short",
+      "title": "From Implicit Trust to Continuous Verification: A Position on the Authorization of AI Agents in Production Services",
+      "authors": "Diego Santos de Araujo (Unipampa/Campus de Alegrete), Silvio Quincozes (UNIPAMPA), Rodrigo Brandão Mansilha (UNIPAMPA)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    },
+    {
+      "id": "s4",
+      "type": "short",
+      "title": "Diferenciação de Ataques em Português e em Inglês: Análise de Experimento sobre as Barreiras Linguísticas no Alinhamento de LLMs",
+      "authors": "Bruno Ferreira (USP), Victor Takashi Hayashi (Universidade de São Paulo, USP)",
+      "paperUrl": "",
+      "slidesUrl": ""
+    }
+  ]
+}

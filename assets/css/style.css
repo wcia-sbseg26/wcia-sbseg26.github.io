@@ -1,0 +1,1525 @@
+/* ==========================================================================
+   WCIA / SBSeg 2026: retrospectiva da primeira edição
+   Direção: a página pratica o que ensina. Tipo grande, linha curta,
+   pouca cor, marca-texto apenas no que realmente importa.
+   ========================================================================== */
+
+/* --- Tokens --------------------------------------------------------------
+   Toda cor nasce aqui, no :root sem media query. Os blocos de tema escuro
+   apenas redefinem estes mesmos nomes, nunca introduzem cor nova.          */
+
+:root {
+  --paper:      #FCFBF9;
+  --paper-2:    #F2F0EA;
+  --paper-3:    #E8E5DC;
+  --ink:        #14171C;
+  --ink-2:      #464C55;
+  --ink-3:      #6E747D;
+  --rule:       #E0DCD2;
+  --accent:     #0E5A50;
+  --accent-ink: #0B4740;
+  --mark-bg:    rgba(226, 236, 88, 0.62);
+
+  /* Rampa sequencial de uma única matiz, ordenada por magnitude.
+     --seg-1 é a maior fatia, --seg-4 a menor. */
+  --seg-1: #0E5A50;
+  --seg-2: #2E8676;
+  --seg-3: #79BFB1;
+  --seg-4: #BEDFD8;
+
+  /* Barra de aceitação: só duas fatias, aceitos e não aceitos. Separam-se por
+     luminosidade, o que sobrevive a qualquer daltonismo, e cada uma é rotulada
+     na legenda. O neutro é mais escuro que --paper-3 de propósito: contra o
+     fundo da página ele precisa ser visível sozinho, e não só ao lado do
+     acento (ΔE 15,3 no tema claro e 21,5 no escuro, contra a superfície). */
+  --ratio-yes: var(--accent);
+  --ratio-no:  #CFC9B9;
+
+  --shadow: 0 1px 2px rgba(20, 23, 28, .05), 0 8px 24px rgba(20, 23, 28, .05);
+
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, "Cascadia Mono",
+          "Segoe UI Mono", Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+          Arial, "Noto Sans", sans-serif;
+
+  --measure: 62ch;
+  --pad: clamp(1.25rem, 4vw, 3rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:      #14161A;
+    --paper-2:    #1B1E24;
+    --paper-3:    #23272E;
+    --ink:        #ECEAE4;
+    --ink-2:      #B4BAC2;
+    --ink-3:      #8B929B;
+    --rule:       #2B2F37;
+    --accent:     #6FDCC6;
+    --accent-ink: #8BE7D4;
+    --mark-bg:    rgba(111, 220, 198, 0.20);
+
+    --seg-1: #6FDCC6;
+    --seg-2: #43A794;
+    --seg-3: #2C7568;
+    --seg-4: #244F47;
+
+    --ratio-yes: var(--accent);
+    --ratio-no:  #454C58;
+
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
+  }
+}
+
+/* --- Base ---------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* O atributo hidden só esconde porque a folha do navegador aplica display:none,
+   e qualquer regra de autor com display vence essa. Sem esta linha, .btn com
+   display:inline-flex continua visível mesmo marcado como hidden. */
+[hidden] { display: none !important; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: clamp(1.0625rem, 0.35vw + 1rem, 1.1875rem);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent-ink); text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skiplink {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: .75rem 1.25rem;
+  z-index: 100;
+}
+.skiplink:focus { left: 0; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 .85rem;
+}
+
+/* O marca-texto é o único gesto decorativo da página, e ele cita uma das
+   próprias dicas: destacar seletivamente em vez de colorir tudo. */
+.mark {
+  background-image: linear-gradient(var(--mark-bg), var(--mark-bg));
+  background-repeat: no-repeat;
+  background-size: 100% 0.62em;
+  background-position: 0 0.72em;
+  padding: 0 .12em;
+}
+
+.caption {
+  font-family: var(--mono);
+  font-size: .78rem;
+  line-height: 1.5;
+  color: var(--ink-3);
+  margin: 1rem 0 0;
+}
+
+/* --- Barra superior ------------------------------------------------------ */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--paper);  /* reserva para navegadores sem color-mix */
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.topbar__inner {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: .6rem var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  text-decoration: none;
+  color: inherit;
+  min-height: 44px;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.wordmark__sigla {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: .06em;
+}
+
+.wordmark__full {
+  font-size: .8rem;
+  color: var(--ink-3);
+}
+
+@media (max-width: 40rem) {
+  .wordmark__full { display: none; }
+}
+
+.langswitch {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+}
+
+.langswitch__btn {
+  font-family: var(--mono);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  min-width: 46px;
+  min-height: 38px;
+  padding: 0 .55rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+
+.langswitch__btn:hover { color: var(--ink); }
+
+.langswitch__btn[aria-current="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.noscript {
+  max-width: 78rem;
+  margin: 1rem auto;
+  padding: 1rem var(--pad);
+  border-left: 4px solid var(--accent);
+  background: var(--paper-2);
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.hero {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 9vw, 6.5rem) var(--pad) clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero__title {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 6.2vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin: 0;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+.hero__subtitle {
+  font-family: var(--mono);
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  color: var(--accent-ink);
+  margin: 1.1rem 0 0;
+  letter-spacing: -0.01em;
+}
+
+.hero__lede {
+  max-width: var(--measure);
+  margin: 2rem 0 0;
+  font-size: clamp(1.1rem, 1.1vw, 1.3rem);
+  color: var(--ink-2);
+}
+
+.hero__note {
+  max-width: var(--measure);
+  margin: 1.6rem 0 0;
+  font-size: clamp(1.15rem, 1.5vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* --- Layout de duas colunas ---------------------------------------------- */
+
+.layout {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: 0 var(--pad) clamp(4rem, 8vw, 7rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+}
+
+@media (min-width: 62rem) {
+  .layout {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+.flow { display: grid; gap: clamp(3rem, 6vw, 5rem); min-width: 0; }
+
+/* --- Índice lateral ------------------------------------------------------ */
+
+.toc { order: -1; }
+
+@media (min-width: 62rem) {
+  .toc {
+    position: sticky;
+    top: 5rem;
+    order: 0;
+  }
+}
+
+.toc__title {
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 .8rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .1rem;
+  counter-reset: toc;
+}
+
+.toc__list a {
+  display: flex;
+  gap: .7rem;
+  padding: .45rem 0;
+  font-size: .92rem;
+  color: var(--ink-2);
+  text-decoration: none;
+  min-height: 44px;
+  align-items: center;
+}
+
+.toc__list a::before {
+  content: counter(toc, decimal-leading-zero);
+  counter-increment: toc;
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--ink-3);
+}
+
+.toc__list a:hover { color: var(--ink); }
+.toc__list a[aria-current="true"] { color: var(--accent-ink); font-weight: 600; }
+
+/* --- Cartões ------------------------------------------------------------- */
+
+.card {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: var(--paper-2);
+}
+
+.card__title {
+  font-family: var(--mono);
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 .9rem;
+}
+
+.card__text {
+  margin: 0;
+  max-width: var(--measure);
+  color: var(--ink-2);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  padding: .85rem 1.35rem;
+  min-height: 44px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* --paper é sempre o oposto de --accent-ink nos dois temas, então uma única
+   regra serve para ambos. Um override no tema escuro colocaria texto claro
+   sobre fundo claro. */
+.btn:hover { background: var(--accent-ink); color: var(--paper); }
+
+.btn__host {
+  font-family: var(--mono);
+  font-size: .78rem;
+  opacity: .72;
+}
+
+.soon {
+  display: inline-block;
+  margin: 1.5rem 0 0;
+  padding: .6rem 1rem;
+  font-family: var(--mono);
+  font-size: .85rem;
+  color: var(--ink-2);
+  border: 1px dashed var(--rule);
+  border-radius: 999px;
+  background: var(--paper);
+}
+
+/* Variante discreta, para o link de fonte: mesma forma e mesmo alvo de toque
+   do botão principal, sem competir com ele pela atenção. Precisa vir depois de
+   .btn:hover, que tem a mesma especificidade. */
+.btn--quiet {
+  margin-top: 1rem;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.btn--quiet:hover { background: var(--ink); color: var(--paper); }
+
+/* Os blocos fora de .section também são destino de âncora do índice, e sem
+   isto a barra superior fixa cobre o título ao chegar. */
+.card, .stats, .timer, .credits { scroll-margin-top: 5rem; }
+
+/* --- Artigos aceitos ----------------------------------------------------- */
+
+.section__lede {
+  margin: 0 0 2.25rem;
+  max-width: var(--measure);
+  color: var(--ink-2);
+}
+
+.papers__group + .papers__group { margin-top: 3rem; }
+
+.papers__grouphead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.papers__grouptitle {
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.papers__groupcount {
+  font-family: var(--mono);
+  font-size: .8rem;
+  color: var(--ink-3);
+  margin: 0;
+}
+
+.papers__list { list-style: none; margin: 0; padding: 0; }
+
+/* Número pendurado numa coluna própria: a numeração ajuda a referenciar um
+   artigo em voz alta, e o texto continua alinhado numa linha só. */
+.paper {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 0 .75rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 5rem;
+}
+
+.paper__index {
+  font-family: var(--mono);
+  font-size: .85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+  margin: .25rem 0 0;
+}
+
+.paper__body { min-width: 0; }
+
+.paper__title {
+  margin: 0;
+  max-width: var(--measure);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+}
+
+.paper__authors {
+  margin: .45rem 0 0;
+  max-width: var(--measure);
+  font-size: .92rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.paper__assets {
+  list-style: none;
+  margin: .9rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+/* O estado do arquivo nunca depende só de cor: o link é sólido e clicável, o
+   espaço reservado é tracejado e diz "em breve" com todas as letras. */
+.asset {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: .4rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: .78rem;
+  line-height: 1.2;
+}
+
+a.asset {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a.asset:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+
+.asset--soon {
+  border-style: dashed;
+  background: transparent;
+  color: var(--ink-3);
+}
+
+.source {
+  margin: 2.25rem 0 0;
+  max-width: var(--measure);
+  font-family: var(--mono);
+  font-size: .8rem;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+
+/* --- Convite para o envio dos slides ------------------------------------- */
+
+.card--call {
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.call__list {
+  list-style: none;
+  margin: 1.3rem 0 1.5rem;
+  padding: 0 0 0 1.15rem;
+  border-left: 2px solid var(--rule);
+  display: grid;
+  gap: .75rem;
+  max-width: var(--measure);
+  font-size: .97rem;
+  color: var(--ink-2);
+}
+
+.card--error { background: var(--paper-2); }
+
+/* --- Estatísticas -------------------------------------------------------- */
+
+/* Grade de fio de cabelo: o fundo do contêiner aparece pelos vãos de 1px e
+   desenha as divisórias, sem uma borda por célula. */
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+@media (min-width: 44rem) {
+  .stats__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.stat {
+  background: var(--paper);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.stat__value {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat__label {
+  margin: .4rem 0 0;
+  font-size: .85rem;
+  line-height: 1.35;
+  color: var(--ink-2);
+}
+
+.stats__subtitle {
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 2.75rem 0 1.25rem;
+}
+
+.ratio + .ratio { margin-top: 1.75rem; }
+
+.ratio__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .3rem 1rem;
+  margin-bottom: .55rem;
+}
+
+.ratio__label { margin: 0; font-weight: 600; font-size: .98rem; }
+
+.ratio__total {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: .8rem;
+  color: var(--ink-3);
+}
+
+/* O vão de 2px mostra a superfície da página entre as fatias, para que a
+   fronteira entre elas não dependa do contraste entre as duas cores. */
+.ratio__bar {
+  display: flex;
+  gap: 2px;
+  height: 18px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.ratio__seg { min-width: 3px; }
+.ratio__seg--yes { background: var(--ratio-yes); }
+.ratio__seg--no  { background: var(--ratio-no); }
+
+.ratio__legend {
+  list-style: none;
+  margin: .8rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: .5rem;
+}
+
+@media (min-width: 44rem) {
+  .ratio__legend { grid-template-columns: 1fr 1fr; gap: .5rem 1.5rem; }
+}
+
+.ratio__legenditem { display: flex; align-items: flex-start; gap: .6rem; }
+
+.ratio__swatch {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-top: .38rem;
+}
+
+.ratio__swatch--yes { background: var(--ratio-yes); }
+.ratio__swatch--no  { background: var(--ratio-no); }
+
+.ratio__legendtext { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .6rem; }
+.ratio__legendlabel { font-size: .95rem; }
+
+.ratio__legendnote {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--ink-3);
+}
+
+.stats__notes {
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0 0 0 1.15rem;
+  border-left: 2px solid var(--rule);
+  display: grid;
+  gap: .65rem;
+  max-width: var(--measure);
+  font-size: .95rem;
+  color: var(--ink-2);
+}
+
+/* --- Calculadora de tempo ------------------------------------------------ */
+
+.timer {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.timer__title {
+  font-family: var(--mono);
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 .9rem;
+}
+
+.timer__text {
+  margin: 0;
+  max-width: var(--measure);
+  color: var(--ink-2);
+}
+
+.timer__control { margin: 1.75rem 0 1.25rem; }
+
+.timer__label {
+  display: block;
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: .5rem;
+}
+
+.timer__field { display: flex; align-items: center; gap: .7rem; }
+
+.timer__field input {
+  font-family: var(--mono);
+  font-size: 2rem;
+  font-weight: 700;
+  width: 4.5ch;
+  padding: .3rem .5rem;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+}
+
+.timer__unit {
+  font-family: var(--mono);
+  font-size: .9rem;
+  color: var(--ink-3);
+}
+
+/* Barra empilhada: o vão de 2px é a própria cor do fundo, e não uma borda,
+   para que as fatias nunca pareçam encostadas. */
+.timer__bar {
+  display: flex;
+  gap: 2px;
+  height: 46px;
+  margin-top: .5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.timer__seg { min-width: 3px; }
+.timer__seg--1 { background: var(--seg-1); }
+.timer__seg--2 { background: var(--seg-2); }
+.timer__seg--3 { background: var(--seg-3); }
+.timer__seg--4 { background: var(--seg-4); }
+
+.timer__legend {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: .55rem;
+}
+
+.timer__legenditem {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: .75rem;
+  padding-bottom: .55rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.timer__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  align-self: center;
+}
+.timer__swatch--1 { background: var(--seg-1); }
+.timer__swatch--2 { background: var(--seg-2); }
+.timer__swatch--3 { background: var(--seg-3); }
+.timer__swatch--4 { background: var(--seg-4); }
+
+.timer__legendlabel { font-size: .98rem; color: var(--ink); }
+
+.timer__legendvalue {
+  font-family: var(--mono);
+  font-size: .95rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.timer__legendshare {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.timer__meta {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+@media (min-width: 44rem) {
+  .timer__meta { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+
+.timer__metatitle {
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 .6rem;
+}
+
+.timer__range {
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+}
+
+.timer__range--limit { margin-top: .9rem; color: var(--ink-2); }
+
+.timer__rangecaption {
+  font-size: .82rem;
+  color: var(--ink-3);
+  margin: .2rem 0 0;
+}
+
+#slides-count {
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  margin-bottom: .2rem;
+}
+
+/* --- Seções de dicas ----------------------------------------------------- */
+
+/* As três seções são filhas deste contêiner, não de .flow, então precisam do
+   próprio espaçamento: o gap de .flow só separa os filhos diretos dele. */
+.sections {
+  display: grid;
+  gap: clamp(3rem, 6vw, 5rem);
+  min-width: 0;
+}
+
+.section { scroll-margin-top: 5rem; }
+
+.section__head {
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.section__title {
+  font-family: var(--mono);
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.tips { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.75rem; }
+
+.tip { max-width: var(--measure); }
+
+.tip__text { margin: 0; }
+
+.tip__sub {
+  list-style: none;
+  margin: .9rem 0 0;
+  padding: 0 0 0 1.15rem;
+  border-left: 2px solid var(--rule);
+  display: grid;
+  gap: .7rem;
+  color: var(--ink-2);
+  font-size: .97rem;
+}
+
+.tip__links {
+  list-style: none;
+  margin: .8rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: .45rem;
+}
+
+.tip__links a {
+  font-family: var(--mono);
+  font-size: .85rem;
+  word-break: break-word;
+}
+
+/* --- Demonstração de slide ----------------------------------------------- */
+
+.demo {
+  margin: 1.5rem 0 0;
+  max-width: 100%;
+}
+
+.demo__grid { display: grid; gap: 1rem; }
+
+@media (min-width: 48rem) {
+  .demo__grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+}
+
+.slide {
+  aspect-ratio: 16 / 9;
+  background: #FFFFFF;
+  color: #14171C;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.slide__tag {
+  font-family: var(--mono);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin: 0 0 .7rem;
+}
+
+.slide--bad .slide__tag { color: #8A5A1B; }
+.slide--good .slide__tag { color: #0B4740; }
+
+.slide__body { margin: 0; display: flex; align-items: center; flex: 1; }
+
+.slide--bad .slide__body {
+  font-size: clamp(.62rem, 1.35vw, .82rem);
+  line-height: 1.5;
+  align-items: flex-start;
+  color: #4A4F57;
+}
+
+.slide--good .slide__body {
+  font-family: var(--sans);
+  font-size: clamp(1rem, 3.1vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+}
+
+.slide__num {
+  font-family: var(--mono);
+  font-size: .6rem;
+  color: #9AA0A8;
+  text-align: right;
+  margin: .5rem 0 0;
+}
+
+/* --- Agradecimentos ------------------------------------------------------ */
+
+.thanks { scroll-margin-top: 5rem; }
+
+.thanks__list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+/* Um fio entre blocos em vez de cartões: a seção é uma sequência de parágrafos
+   de agradecimento, e caixas com fundo dariam a ela um peso que ela não tem. */
+.thanks__item {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+  max-width: var(--measure);
+}
+
+.thanks__item:last-child { border-bottom: 1px solid var(--rule); }
+
+.thanks__itemtitle {
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 .55rem;
+}
+
+.thanks__itemtext { margin: 0; color: var(--ink-2); }
+
+.thanks__closing {
+  margin: 2rem 0 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  line-height: 1.45;
+  max-width: var(--measure);
+}
+
+/* --- Vídeo de encerramento ----------------------------------------------- */
+
+.closing { scroll-margin-top: 5rem; }
+
+.closing__frame {
+  margin-top: 1.75rem;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--paper-3);
+  box-shadow: var(--shadow);
+}
+
+/* O vídeo é 16:9 e a moldura acompanha: sem a proporção declarada, o bloco
+   nasce com altura zero e a página salta quando os metadados chegam. */
+.closing__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.closing__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 1.1rem;
+}
+
+.closing__version {
+  margin: 0;
+  font-size: .88rem;
+  color: var(--ink-3);
+}
+
+/* --- Galeria ------------------------------------------------------------- */
+
+.gallery { scroll-margin-top: 5rem; }
+
+/* Colunas em vez de grade: as fotos vêm em 4:3, 16:9 e retrato, e uma grade de
+   linhas alinhadas obrigaria a recortar todas para uma proporção só. Com
+   multi-coluna cada imagem entra na altura que tem, sem buracos e sem medir
+   nada em JavaScript. */
+/* A largura de coluna é o que decide quantas colunas cabem, e ela é escolhida
+   para dar duas no celular e três na coluna de conteúdo do desktop, que tem
+   cerca de 845px ao lado do índice lateral. */
+.gallery__grid {
+  margin-top: 1.75rem;
+  column-width: 11rem;
+  column-gap: .75rem;
+}
+
+@media (min-width: 60rem) {
+  .gallery__grid { column-width: 15rem; column-gap: 1rem; }
+}
+
+.gallery__item {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 0 .75rem;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--paper-2);
+  overflow: hidden;
+  cursor: zoom-in;
+  break-inside: avoid;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+@media (min-width: 60rem) {
+  .gallery__item { margin-bottom: 1rem; }
+}
+
+.gallery__item:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.gallery__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* A etiqueta de vídeo é o único sinal de que o item se comporta de outro jeito,
+   então ela não pode depender só de cor: leva o glifo de reprodução e o rótulo
+   traduzido, ambos legíveis sobre qualquer foto por causa do fundo sólido. */
+.gallery__badge {
+  position: absolute;
+  left: .6rem;
+  bottom: .6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .3rem .6rem;
+  border-radius: 999px;
+  background: rgba(10, 12, 16, .78);
+  color: #FFFFFF;
+  font-family: var(--mono);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.gallery__play { font-size: .6rem; line-height: 1; }
+
+/* --- Ampliação da galeria ------------------------------------------------- */
+
+/* O véu é escuro nos dois temas, de propósito: uma foto de auditório com luz
+   baixa perde contraste sobre fundo claro, e o objetivo aqui é a imagem. */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: clamp(.75rem, 3vw, 2rem);
+  background: rgba(8, 10, 13, .93);
+}
+
+body.is-locked { overflow: hidden; }
+
+.lightbox__figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  max-width: min(100%, 72rem);
+  max-height: 100%;
+  min-width: 0;
+}
+
+.lightbox__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  flex: 1;
+}
+
+.lightbox__media {
+  display: block;
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  background: #000;
+}
+
+.lightbox__caption {
+  color: #E9E7E1;
+  text-align: center;
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.lightbox__counter {
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #9AA3AD;
+  margin: 0 0 .35rem;
+}
+
+.lightbox__text {
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.55;
+}
+
+.lightbox__close,
+.lightbox__nav {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .08);
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox__close:hover,
+.lightbox__nav:hover { background: rgba(255, 255, 255, .2); }
+
+.lightbox__close {
+  position: absolute;
+  top: clamp(.75rem, 3vw, 2rem);
+  right: clamp(.75rem, 3vw, 2rem);
+  font-size: 1.05rem;
+}
+
+/* Na tela estreita as setas saem das laterais, onde roubariam a largura da
+   foto, e vão para o rodapé do véu, lado a lado. */
+@media (max-width: 40rem) {
+  .lightbox { flex-wrap: wrap; align-content: center; }
+  .lightbox__figure { order: -1; width: 100%; }
+  .lightbox__media { max-height: 62vh; }
+}
+
+/* --- Programação --------------------------------------------------------- */
+
+.prog__block + .prog__block { margin-top: 2.5rem; }
+
+@media (min-width: 52rem) {
+  .prog__block {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 1.75rem;
+  }
+}
+
+.prog__time {
+  font-family: var(--mono);
+  font-size: .95rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-ink);
+  margin: 0 0 .9rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 52rem) {
+  .prog__time { margin: .15rem 0 0; }
+}
+
+.prog__blockbody { display: grid; gap: 1.75rem; min-width: 0; }
+
+/* Abertura, intervalo e encerramento não têm artigos, então são uma linha só,
+   marcada por um fio pontilhado para não competir com as sessões. */
+.prog__moment {
+  padding: .8rem 0;
+  border-top: 1px dashed var(--rule);
+  border-bottom: 1px dashed var(--rule);
+}
+
+.prog__momenttitle {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+.prog__sessionhead {
+  padding-bottom: .7rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.prog__sessiontitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: .3rem 0 0;
+}
+
+.prog__sessioncount {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--ink-3);
+  margin: .35rem 0 0;
+}
+
+.prog__papers { list-style: none; margin: 0; padding: 0; display: grid; gap: .9rem; }
+
+.prog__paper {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.prog__paperbody { min-width: 0; }
+
+.prog__papertitle {
+  display: block;
+  font-weight: 600;
+  line-height: 1.35;
+  font-size: .99rem;
+  color: var(--ink);
+  text-decoration-color: var(--rule);
+}
+
+.prog__papertitle:hover { color: var(--accent-ink); text-decoration-color: currentColor; }
+
+.prog__paperauthors {
+  margin: .25rem 0 0;
+  font-size: .84rem;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+
+.prog__type {
+  flex: none;
+  font-family: var(--mono);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .22rem .55rem;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.prog__type--full { border-color: var(--accent); color: var(--accent-ink); }
+
+/* --- Pessoas: coordenações e Comitê de Programa --------------------------- */
+
+.people__grid {
+  display: grid;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 46rem) {
+  .people__grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+}
+
+.people__title {
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 .9rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.people__list { list-style: none; margin: 0; padding: 0; }
+
+/* A lista longa do comitê quebra em colunas sozinha; as listas curtas das
+   coordenações já cabem numa coluna e ficam como estão. */
+.people__grid + .people {
+  column-width: 15rem;
+  column-gap: 2rem;
+}
+
+/* Sem isto o rótulo "Membros" entra como primeiro item da primeira coluna e
+   parece nomear só aquela terça parte da lista. */
+.people__grid + .people .people__title { column-span: all; }
+
+.people__item {
+  break-inside: avoid;
+  padding: .32rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .1rem .55rem;
+  font-size: .93rem;
+  line-height: 1.45;
+}
+
+.people__name { color: var(--ink); }
+
+.people__where {
+  font-family: var(--mono);
+  font-size: .76rem;
+  color: var(--ink-3);
+}
+
+/* --- Divisor de seção ----------------------------------------------------- */
+
+/* Marca a virada da retrospectiva para o material de apoio. É só tipografia
+   entre dois fios: um cartão aqui pesaria mais do que a transição merece. */
+.divider {
+  padding: 1.75rem 0;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 5rem;
+}
+
+.divider__title {
+  font-family: var(--mono);
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: .2rem 0 .6rem;
+}
+
+.divider__text {
+  margin: 0;
+  color: var(--ink-2);
+  max-width: var(--measure);
+}
+
+/* --- Créditos ------------------------------------------------------------ */
+
+.credits {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  border-radius: 14px;
+  background: var(--paper-2);
+  scroll-margin-top: 5rem;
+}
+
+.credits__title {
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 .8rem;
+}
+
+.credits__people {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: var(--measure);
+}
+
+.credits__origin {
+  margin: 1.1rem 0 0;
+  font-size: .88rem;
+  color: var(--ink-3);
+  max-width: var(--measure);
+}
+
+/* --- Rodapé -------------------------------------------------------------- */
+
+.footer {
+  border-top: 1px solid var(--rule);
+  background: var(--paper-2);
+}
+
+.footer__inner {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vw, 4rem) var(--pad);
+  display: grid;
+  gap: 2rem;
+  font-size: .92rem;
+  color: var(--ink-2);
+}
+
+@media (min-width: 48rem) {
+  .footer__inner { grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+}
+
+.footer__block p { margin: 0 0 .35rem; }
+
+.footer__strong {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: .6rem;
+}
+
+/* --- Preferências do sistema --------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media print {
+  .topbar, .toc, .langswitch, .lightbox { display: none; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .flow { gap: 1.5rem; }
+
+  /* No papel a lista de artigos é o que interessa: as pílulas de arquivo viram
+     texto simples e nada fica preso dentro de um bloco quebrado ao meio. */
+  .paper, .stat, .ratio, .prog__paper, .thanks__item { break-inside: avoid; }
+
+  /* O vídeo não existe no papel, e a galeria vira uma coluna só para que
+     nenhuma foto seja cortada entre duas páginas. */
+  .closing__frame { display: none; }
+  .gallery__grid { column-width: auto; columns: 2; }
+  .asset { min-height: 0; padding: 0; border: 0; border-radius: 0; }
+  a.asset { background: none; color: #000; text-decoration: underline; }
+  .paper__assets li + li::before { content: "· "; color: #000; }
+}

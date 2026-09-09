@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WCIA 2026 · A primeira edição · Workshop de Cibersegurança em IA</title>
+<meta name="description" content="Retrospectiva da primeira edição do Workshop de Cibersegurança em IA (WCIA), no SBSeg 2026: vídeo de encerramento, galeria do evento, programação realizada, artigos aceitos e estatísticas.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- id "principal", e não "conteudo": este último é o id da seção "Dicas de
+     conteúdo", gerada a partir do JSON, e ids duplicados fariam
+     getElementById devolver o elemento errado. -->
+<a class="skiplink" href="#principal" data-i18n="nav.skip">Ir para o conteúdo</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="wordmark" href="./">
+      <span class="wordmark__sigla" data-i18n="nav.brand">WCIA</span>
+      <span class="wordmark__full" data-i18n="nav.brandFull">Workshop de Cibersegurança em IA</span>
+    </a>
+
+    <nav class="langswitch" aria-label="Idioma" data-i18n-attr="aria-label:nav.langLabel">
+      <button type="button" class="langswitch__btn" data-lang="pt" lang="pt-BR">PT</button>
+      <button type="button" class="langswitch__btn" data-lang="en" lang="en">EN</button>
+      <button type="button" class="langswitch__btn" data-lang="es" lang="es">ES</button>
+    </nav>
+  </div>
+</header>
+
+<noscript>
+  <p class="noscript" data-i18n="noscript">Este site usa JavaScript para carregar o conteúdo nos três idiomas. Com o JavaScript desativado, consulte a página oficial do WCIA: <a href="https://www.sbseg2026.uff.br/workshops/wcia/">sbseg2026.uff.br</a></p>
+</noscript>
+
+<main id="principal">
+
+  <section class="hero">
+    <p class="eyebrow" data-i18n="hero.eyebrow">SBSeg 2026</p>
+    <h1 class="hero__title" data-i18n="hero.title">A primeira edição do WCIA foi um sucesso</h1>
+    <p class="hero__subtitle" data-i18n="hero.subtitle">Workshop de Cibersegurança em IA, no SBSeg 2026</p>
+    <p class="hero__lede" data-i18n="hero.lede"></p>
+    <p class="hero__note"><span class="mark" data-i18n="hero.note"></span></p>
+  </section>
+
+  <div class="layout">
+
+    <aside class="toc" aria-labelledby="toc-title">
+      <p class="toc__title" id="toc-title" data-i18n="toc">Nesta página</p>
+      <ol class="toc__list" id="toc-list"></ol>
+    </aside>
+
+    <div class="flow">
+
+      <section class="thanks" id="agradecimentos">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="thanks.eyebrow">Agradecimentos</p>
+          <h2 class="section__title" data-i18n="thanks.title">Um agradecimento especial</h2>
+        </div>
+        <p class="section__lede" data-i18n="thanks.lede"></p>
+        <ul class="thanks__list" id="thanks-list"></ul>
+        <p class="thanks__closing"><span class="mark" data-i18n="thanks.closingNote"></span></p>
+      </section>
+
+      <section class="closing" id="video">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="closing.eyebrow">Vídeo</p>
+          <h2 class="section__title" data-i18n="closing.title">Vídeo de encerramento do WCIA 2026</h2>
+        </div>
+        <p class="section__lede" data-i18n="closing.text"></p>
+        <div class="closing__frame" id="closing-frame"></div>
+        <div class="closing__meta">
+          <p class="closing__version" id="closing-version"></p>
+          <a class="btn btn--quiet" id="closing-download" href="#" download hidden>
+            <span data-i18n="closing.download">Baixar o vídeo</span>
+            <span class="btn__host" id="closing-size"></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="gallery" id="galeria">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="gallery.eyebrow">Galeria</p>
+          <h2 class="section__title" data-i18n="gallery.title">A primeira edição em imagens</h2>
+        </div>
+        <p class="section__lede" data-i18n="gallery.text"></p>
+        <div class="gallery__grid" id="gallery-grid"></div>
+        <p class="source" data-i18n="gallery.credit"></p>
+      </section>
+
+      <section class="section" id="programacao">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="program.eyebrow">Programação</p>
+          <h2 class="section__title" data-i18n="program.title">A programação realizada</h2>
+        </div>
+        <p class="section__lede" id="program-lede"></p>
+        <div id="program-body"></div>
+        <p class="source" id="program-source"></p>
+      </section>
+
+      <section class="section" id="artigos">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="papers.eyebrow">Programa</p>
+          <h2 class="section__title" data-i18n="papers.title">Artigos aceitos</h2>
+        </div>
+        <p class="section__lede" data-i18n="papers.text"></p>
+        <div id="papers-groups"></div>
+        <p class="source" id="papers-source"></p>
+        <a class="btn btn--quiet" href="https://www.sbseg2026.uff.br/workshops/wcia/" target="_blank" rel="noopener">
+          <span data-i18n="papers.sourceCta">Abrir a página oficial do WCIA</span>
+          <span class="btn__host" data-i18n="papers.sourceHost">sbseg2026.uff.br</span>
+        </a>
+      </section>
+
+      <section class="stats" id="estatisticas">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="stats.eyebrow">Números</p>
+          <h2 class="section__title" data-i18n="stats.title">Estatísticas gerais</h2>
+        </div>
+        <p class="section__lede" data-i18n="stats.text"></p>
+        <div id="stats-body"></div>
+      </section>
+
+      <section class="section" id="comite">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="committee.eyebrow">Revisão</p>
+          <h2 class="section__title" data-i18n="committee.title">Comitê de Programa</h2>
+        </div>
+        <p class="section__lede" id="committee-lede"></p>
+        <div id="committee-body"></div>
+      </section>
+
+      <section class="card card--call" id="slides">
+        <p class="eyebrow" data-i18n="slidesCall.eyebrow">Convite às pessoas autoras</p>
+        <h2 class="card__title" data-i18n="slidesCall.title">Envie os slides da sua apresentação</h2>
+        <p class="card__text" data-i18n="slidesCall.text"></p>
+        <ul class="call__list" id="call-list"></ul>
+        <p class="card__text"><span class="mark" data-i18n="slidesCall.why"></span></p>
+        <p class="soon" id="call-soon" data-i18n="slidesCall.soon"></p>
+        <a class="btn" id="call-cta" href="#" hidden>
+          <span data-i18n="slidesCall.cta">Enviar os slides por e-mail</span>
+          <span class="btn__host" id="call-host"></span>
+        </a>
+      </section>
+
+      <section class="divider" id="apoio">
+        <p class="eyebrow" data-i18n="guides.eyebrow">Material de apoio</p>
+        <h2 class="divider__title" data-i18n="guides.title">Sugestões para as apresentações</h2>
+        <p class="divider__text" data-i18n="guides.text"></p>
+      </section>
+
+      <section class="card card--template" id="template">
+        <p class="eyebrow" data-i18n="template.eyebrow">Slides</p>
+        <h2 class="card__title" data-i18n="template.title">Template de slides do WCIA</h2>
+        <p class="card__text" data-i18n="template.text"></p>
+        <p class="soon" id="template-soon" data-i18n="template.soon"></p>
+        <a class="btn" id="template-cta" href="#" target="_blank" rel="noopener" hidden>
+          <span data-i18n="template.cta">Abrir o template de slides</span>
+        </a>
+      </section>
+
+      <section class="timer" id="tempo">
+        <p class="eyebrow" data-i18n="timer.eyebrow">Ferramenta</p>
+        <h2 class="timer__title" data-i18n="timer.title">Divisão do tempo da apresentação</h2>
+        <p class="timer__text" data-i18n="timer.text"></p>
+
+        <div class="timer__control">
+          <label class="timer__label" for="slot" data-i18n="timer.inputLabel">Duração do slot</label>
+          <div class="timer__field">
+            <input type="number" id="slot" min="5" max="90" step="1" value="8" inputmode="numeric">
+            <span class="timer__unit" data-i18n="timer.unit">minutos</span>
+          </div>
+        </div>
+
+        <div class="timer__bar" id="timer-bar" role="img" aria-label=""></div>
+        <ul class="timer__legend" id="timer-legend"></ul>
+
+        <div class="timer__meta">
+          <div class="timer__metaitem">
+            <p class="timer__metatitle" data-i18n="timer.toleranceTitle">Janela de tempo aceitável</p>
+            <p class="timer__range"><span class="mark" id="tol-target"></span></p>
+            <p class="timer__rangecaption" data-i18n="timer.toleranceTarget"></p>
+            <p class="timer__range timer__range--limit" id="tol-limit"></p>
+            <p class="timer__rangecaption" data-i18n="timer.toleranceLimit"></p>
+          </div>
+          <div class="timer__metaitem">
+            <p class="timer__metatitle" id="slides-count"></p>
+            <p class="timer__rangecaption" data-i18n="timer.slidesHint"></p>
+          </div>
+        </div>
+
+        <p class="caption" data-i18n="timer.caption"></p>
+      </section>
+
+      <div id="sections" class="sections"></div>
+
+      <section class="credits" id="creditos">
+        <p class="eyebrow" data-i18n="credits.eyebrow">Créditos</p>
+        <h2 class="credits__title" data-i18n="credits.title">Colaboradores</h2>
+        <p class="credits__people" data-i18n="credits.people"></p>
+        <p class="credits__origin">
+          <span data-i18n="credits.originPrefix"></span>
+          <a href="https://sbseg2024.ita.br/autores/sugestoes-para-apresentacoes/" target="_blank" rel="noopener" data-i18n="credits.originLink">Ver a versão original do SBSeg 2024</a>
+        </p>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__block">
+      <p class="footer__strong" data-i18n="footer.workshop">Workshop de Cibersegurança em IA</p>
+      <p data-i18n="footer.event"></p>
+      <p data-i18n="footer.place"></p>
+    </div>
+    <div class="footer__block">
+      <p class="footer__strong" data-i18n="footer.coordination">Coordenação do WCIA</p>
+      <p data-i18n="footer.coordinators"></p>
+    </div>
+    <div class="footer__block">
+      <p><a href="https://www.sbseg2026.uff.br/workshops/wcia/" target="_blank" rel="noopener" data-i18n="footer.officialLink">Página oficial do WCIA</a></p>
+      <p><a href="https://sol.sbc.org.br" target="_blank" rel="noopener" data-i18n="footer.solLink">Anais na SBC-OpenLib</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Ampliação da galeria. Fica fora do <main> porque, aberto, é um diálogo
+     modal sobre a página inteira, e não conteúdo do fluxo do documento. -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" hidden
+     data-i18n-attr="aria-label:gallery.dialogLabel">
+  <button type="button" class="lightbox__close" id="lightbox-close"
+          data-i18n-attr="aria-label:gallery.close;title:gallery.close">
+    <span aria-hidden="true">✕</span>
+  </button>
+
+  <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightbox-prev"
+          data-i18n-attr="aria-label:gallery.prev;title:gallery.prev">
+    <span aria-hidden="true">‹</span>
+  </button>
+
+  <figure class="lightbox__figure">
+    <div class="lightbox__stage" id="lightbox-stage"></div>
+    <figcaption class="lightbox__caption">
+      <p class="lightbox__counter" id="lightbox-counter"></p>
+      <p class="lightbox__text" id="lightbox-text"></p>
+    </figcaption>
+  </figure>
+
+  <button type="button" class="lightbox__nav lightbox__nav--next" id="lightbox-next"
+          data-i18n-attr="aria-label:gallery.next;title:gallery.next">
+    <span aria-hidden="true">›</span>
+  </button>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

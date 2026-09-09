@@ -32,3 +32,15 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# macOS
+.DS_Store
+
+# Estado local de plugins do editor/assistente
+.remember/
+**/.remember/
+
+# Material bruto do evento: as fotos e os vídeos originais ficam só na máquina
+# de quem organizou. O que o site publica são as versões tratadas, em
+# assets/fotos/ e video/, e essas sim entram no repositório.
+fotos_do_evento/
