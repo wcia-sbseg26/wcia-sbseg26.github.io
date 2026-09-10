@@ -183,21 +183,6 @@
     return num(total ? (part / total) * 100 : 0, 1) + '%';
   }
 
-  /* "1:43" em vez de "1 min 43 s": a notação de relógio é a mesma nos três
-     idiomas e dispensa uma chave de tradução para cada unidade. */
-  function clock(seconds) {
-    var total = Math.max(0, Math.round(seconds || 0));
-    var rest = total % 60;
-    return num(Math.floor(total / 60), 0) + ':' + (rest < 10 ? '0' : '') + num(rest, 0);
-  }
-
-  /* Megabytes decimais, que é a unidade que o navegador mostra ao baixar o
-     arquivo. O separador decimal segue o idioma, então 25.6 MB em inglês é
-     25,6 MB em português. */
-  function megabytes(bytes) {
-    return num((bytes || 0) / 1e6, 1, true) + ' MB';
-  }
-
   function findPaper(id) {
     var list = (data && data.papers) || [];
     for (var i = 0; i < list.length; i++) {
@@ -425,25 +410,19 @@
     var frame = document.getElementById('closing-frame');
     var version = document.getElementById('closing-version');
     var watch = document.getElementById('closing-watch');
-    var download = document.getElementById('closing-download');
-    var size = document.getElementById('closing-size');
     clear(frame);
 
     var info = gallery && gallery.closing;
     if (!info || !(info.youtubeId || info.src)) {
       version.textContent = '';
       watch.hidden = true;
-      download.hidden = true;
       frame.appendChild(dataError('gallery.error'));
       return;
     }
 
     frame.appendChild(info.youtubeId ? youtubeFacade(info) : localPlayer(info));
 
-    version.textContent = format(t('closing.version'), {
-      n: num(info.version || 1, 0),
-      date: formatDate(info.published)
-    });
+    version.textContent = format(t('closing.version'), { date: formatDate(info.published) });
 
     /* Link direto para o YouTube, para quem prefere assistir lá, compartilhar
        ou usar as legendas e a velocidade do player nativo. */
@@ -452,20 +431,6 @@
       watch.hidden = false;
     } else {
       watch.hidden = true;
-    }
-
-    /* A versão anterior continua hospedada aqui e baixável: é a cópia offline
-       do vídeo e não depende de o YouTube seguir existindo. */
-    var old = info.previous;
-    if (old && old.src) {
-      download.href = old.src;
-      download.hidden = false;
-      size.textContent = format(t('closing.meta'), {
-        duration: clock(old.duration),
-        size: megabytes(old.bytes)
-      });
-    } else {
-      download.hidden = true;
     }
   }
 

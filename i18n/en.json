@@ -54,9 +54,7 @@
     "privacy": "The video is only loaded from YouTube once you press play.",
     "watch": "Watch on YouTube",
     "watchHost": "youtu.be",
-    "version": "Version {n}, published on {date}. The first version is still available to download, hosted on this site.",
-    "meta": "{duration} · MP4 · {size}",
-    "download": "Download the first version",
+    "version": "Published on {date}.",
     "fallback": "Your browser cannot play HTML5 video. Use the download link below to watch the video."
   },
   "gallery": {

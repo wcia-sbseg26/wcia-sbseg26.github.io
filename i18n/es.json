@@ -54,9 +54,7 @@
     "privacy": "El video solo se carga desde YouTube cuando usted toca reproducir.",
     "watch": "Ver en YouTube",
     "watchHost": "youtu.be",
-    "version": "Versión {n}, publicada el {date}. La primera versión sigue disponible para descargar, alojada en este sitio.",
-    "meta": "{duration} · MP4 · {size}",
-    "download": "Descargar la primera versión",
+    "version": "Publicado el {date}.",
     "fallback": "Su navegador no reproduce video en HTML5. Use el enlace de descarga de abajo para ver el video."
   },
   "gallery": {

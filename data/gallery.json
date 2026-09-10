@@ -1,5 +1,5 @@
 {
-  "_comment": "Galeria do evento. Os arquivos e as dimensões ficam aqui; as legendas, por serem texto, ficam em i18n/<lang>.json, na chave gallery.captions, indexada pelo mesmo id usado aqui. Em closing, youtubeId liga o player sob demanda e previous guarda a versão anterior, ainda hospedada no próprio site.",
+  "_comment": "Galeria do evento. Os arquivos e as dimensões ficam aqui; as legendas, por serem texto, ficam em i18n/<lang>.json, na chave gallery.captions, indexada pelo mesmo id usado aqui. Em closing, youtubeId liga o player do YouTube sob demanda, atrás de uma capa servida por este site.",
   "closing": {
     "youtubeId": "lTh1qFZY0Sc",
     "url": "https://youtu.be/lTh1qFZY0Sc",
@@ -8,14 +8,7 @@
     "w": 640,
     "h": 360,
     "version": 2,
-    "published": "2026-09-09",
-    "previous": {
-      "src": "video/wcia2026_encerramento.mp4",
-      "type": "video/mp4",
-      "duration": 103,
-      "bytes": 26849059,
-      "version": 1
-    }
+    "published": "2026-09-09"
   },
   "items": [
     {

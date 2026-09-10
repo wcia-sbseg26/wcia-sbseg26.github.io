@@ -54,9 +54,7 @@
     "privacy": "O vídeo só é carregado do YouTube quando você toca em assistir.",
     "watch": "Assistir no YouTube",
     "watchHost": "youtu.be",
-    "version": "Versão {n}, publicada em {date}. A primeira versão continua disponível para download, hospedada neste site.",
-    "meta": "{duration} · MP4 · {size}",
-    "download": "Baixar a primeira versão",
+    "version": "Publicado em {date}.",
     "fallback": "O seu navegador não reproduz vídeo em HTML5. Use o link de download abaixo para assistir ao vídeo."
   },
   "gallery": {

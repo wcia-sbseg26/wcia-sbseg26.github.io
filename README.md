@@ -52,7 +52,7 @@ Depois abra <http://127.0.0.1:8000/>.
 │  ├─ pt.json              Português, e fonte da estrutura
 │  ├─ en.json              Inglês
 │  └─ es.json              Espanhol
-├─ video/                  Vídeo de encerramento e clipes da galeria
+├─ video/                  Clipes da galeria
 ├─ .nojekyll               Desliga o Jekyll do GitHub Pages
 └─ docs/superpowers/specs/ Documento de design
 ```
@@ -152,11 +152,7 @@ na segunda versão, publicada no YouTube:
   "title": "WCIA 2026 | O Primeiro Workshop Brasileiro de Cibersegurança em IA",
   "poster": "assets/fotos/encerramento-poster.jpg",
   "w": 640, "h": 360,
-  "version": 2, "published": "2026-09-09",
-  "previous": {
-    "src": "video/wcia2026_encerramento.mp4",
-    "duration": 103, "bytes": 26849059, "version": 1
-  }
+  "version": 2, "published": "2026-09-09"
 }
 ```
 
@@ -164,11 +160,10 @@ Com `youtubeId` preenchido, a seção mostra uma capa servida por este site e s�
 carrega o player do YouTube depois que a pessoa toca em assistir. Sem
 `youtubeId`, o mesmo bloco cai para um `<video>` local, usando `src` e `poster`.
 
-`previous` é a versão anterior, ainda hospedada aqui: `duration` e `bytes`
-alimentam o rótulo do botão de download, e existir uma cópia própria significa
-que o vídeo não depende de o YouTube seguir no ar. Ao publicar uma versão nova,
-incremente `version`, atualize `published` e mova a versão anterior para
-`previous`.
+Só a versão vigente fica publicada. A primeira versão, hospedada aqui como MP4,
+foi retirada quando a segunda entrou. `version` não aparece na página, serve de
+registro para quem edita: ao publicar uma versão nova, troque `youtubeId`, a
+capa e `published`, e incremente `version`.
 
 A capa vem da miniatura do próprio vídeo no YouTube, baixada e recortada de 4:3
 para 16:9, e servida daqui. Buscá-la em `i.ytimg.com` a cada visita entregaria
@@ -263,12 +258,11 @@ O repositório é um site de organização do GitHub Pages, então o conteúdo d
 branch `main` é publicado na raiz do domínio. Não há etapa de build nem workflow
 do GitHub Actions: um `git push` basta.
 
-Os clipes da galeria e a primeira versão do vídeo de encerramento são servidos
-como arquivos estáticos do próprio Pages. Estão em H.264 com áudio AAC e com o
-átomo `moov` no início do arquivo, o que permite ao navegador começar a tocar
-antes de terminar o download. Os clipes só carregam quando alguém abre a
-ampliação, e a versão atual do vídeo de encerramento está no YouTube, atrás de
-uma capa, então nenhum vídeo pesa no carregamento da página.
+Os clipes da galeria são servidos como arquivos estáticos do próprio Pages.
+Estão em H.264 com áudio AAC e com o átomo `moov` no início do arquivo, o que
+permite ao navegador começar a tocar antes de terminar o download. Eles só
+carregam quando alguém abre a ampliação, e o vídeo de encerramento está no
+YouTube, atrás de uma capa, então nenhum vídeo pesa no carregamento da página.
 
 ## Créditos
 
