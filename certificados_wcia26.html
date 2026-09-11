@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Certificados de apresentação · WCIA 2026</title>
+<meta name="description" content="Certificados de apresentação dos trabalhos do I Workshop de Cibersegurança em IA (WCIA 2026), no SBSeg 2026.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* Página avulsa, fora da navegação do site: só o necessário por cima dos
+     tokens de assets/css/style.css, sem cor nem componente novo. */
+  .wrap { max-width: 78rem; margin: 0 auto; padding: 0 var(--pad) clamp(4rem, 8vw, 7rem); }
+
+  .filtro { display: grid; gap: .5rem; max-width: 32rem; margin: 0 0 clamp(2rem, 4vw, 3rem); }
+  .filtro label { font-family: var(--mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+  .filtro input {
+    font: inherit;
+    color: var(--ink);
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: .65rem .85rem;
+  }
+  .filtro__contagem { font-family: var(--mono); font-size: .82rem; color: var(--ink-3); margin: 0; }
+
+  .certs { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(2rem, 4vw, 3rem); }
+  @media (min-width: 52rem) { .certs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  .cert { display: grid; gap: 1.1rem; align-content: start; min-width: 0; }
+
+  .cert__shot {
+    display: block;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;      /* o certificado é branco: a moldura não o tinge no tema escuro */
+    box-shadow: var(--shadow);
+    line-height: 0;
+  }
+  .cert__shot img { width: 100%; height: auto; display: block; }
+
+  .cert__body { min-width: 0; }
+  .cert__meta {
+    font-family: var(--mono);
+    font-size: .74rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 .55rem;
+  }
+  .cert__title { font-size: 1.12rem; line-height: 1.35; margin: 0 0 .5rem; text-wrap: balance; }
+  .cert__name { margin: 0 0 .35rem; font-weight: 600; color: var(--accent-ink); }
+  .cert__authors { margin: 0; font-size: .92rem; color: var(--ink-2); line-height: 1.5; }
+  .cert__actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0 0; }
+
+  .cert__btn {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: .82rem;
+    text-decoration: none;
+    color: var(--paper);
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: .45rem .95rem;
+  }
+  .cert__btn:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+  .cert__btn--quiet { color: var(--ink-2); background: transparent; border-color: var(--rule); }
+  .cert__btn--quiet:hover { color: var(--ink); background: var(--paper-2); border-color: var(--ink-3); }
+
+  .vazio { margin: 0; color: var(--ink-2); }
+
+  @media print {
+    .filtro { display: none; }
+    .certs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+    .cert { break-inside: avoid; }
+    .cert__actions { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skiplink" href="#principal">Ir para o conteúdo</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="wordmark" href="./">
+      <span class="wordmark__sigla">WCIA</span>
+      <span class="wordmark__full">Workshop de Cibersegurança em IA</span>
+    </a>
+  </div>
+</header>
+
+<main id="principal">
+
+  <section class="hero">
+    <p class="eyebrow">WCIA 2026 · SBSeg 2026</p>
+    <h1 class="hero__title">Certificados de apresentação</h1>
+    <p class="hero__subtitle">15 trabalhos apresentados no I WCIA</p>
+    <p class="hero__lede">Cada certificado registra a apresentação de um trabalho no I Workshop de Cibersegurança em IA, realizado em 1º de setembro de 2026, durante o XXVI SBSeg, em Armação dos Búzios, RJ. Clique na miniatura para ver o certificado em tamanho real ou use o botão para baixar o PDF. A lista está ordenada pelo título do trabalho.</p>
+    <p class="hero__note"><span class="mark">Esta página não aparece no menu do site: guarde o endereço ou compartilhe o link com quem apresentou.</span></p>
+  </section>
+
+  <div class="wrap">
+
+    <form class="filtro" role="search" onsubmit="return false">
+      <label for="q">Filtrar por título, apresentador, autoria ou sessão</label>
+      <input type="search" id="q" autocomplete="off" placeholder="ex.: prompt injection, Sessão 2, Rafael">
+      <p class="filtro__contagem" id="contagem" aria-live="polite">15 certificados</p>
+    </form>
+
+    <ul class="certs" id="lista">
+      <li class="cert" data-busca="a cross-lingual security evaluation of prompt injection defenses in small language models pedro filho pedro filho; erikson júlio de aguiar; agma juci traina sessão 3 segurança de llms: red teaming, robustez e prompt injection">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_A_Cross_Lingual_Pedro_Filho.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_A_Cross_Lingual_Pedro_Filho.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Pedro Filho">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 3 · Segurança de LLMs: Red Teaming, Robustez e Prompt Injection · artigo completo</p>
+          <h2 class="cert__title">A Cross-Lingual Security Evaluation of Prompt Injection Defenses in Small Language Models</h2>
+          <p class="cert__name">Pedro Filho</p>
+          <p class="cert__authors">Pedro Filho; Erikson Júlio de Aguiar; Agma Juci Traina</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_A_Cross_Lingual_Pedro_Filho.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_A_Cross_Lingual_Pedro_Filho.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="a synthetic benchmark for integrated security assessment of rag-based corporate assistants larissa de oliveira figueira larissa de oliveira figueira; luiz duarte; rafael silva sessão 3 segurança de llms: red teaming, robustez e prompt injection">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_A_Synthetic_Larissa_de_Oliveira_Figueira.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_A_Synthetic_Larissa_de_Oliveira_Figueira.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Larissa de Oliveira Figueira">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 3 · Segurança de LLMs: Red Teaming, Robustez e Prompt Injection · artigo completo</p>
+          <h2 class="cert__title">A Synthetic Benchmark for Integrated Security Assessment of RAG-Based Corporate Assistants</h2>
+          <p class="cert__name">Larissa de Oliveira Figueira</p>
+          <p class="cert__authors">Larissa de Oliveira Figueira; Luiz Duarte; Rafael Silva</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_A_Synthetic_Larissa_de_Oliveira_Figueira.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_A_Synthetic_Larissa_de_Oliveira_Figueira.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="adversarial attacks as a diagnostic tool for a mining detection network in the brazilian legal amazon victor takashi hayashi leonardo fajardo grupioni; gabriel stephano santos; paulo sérgio cugnasca; felipe valencia de almeida sessão 1 robustez, segurança e adoção de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Adversarial_Attacks_Victor_Takashi_Hayashi.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Adversarial_Attacks_Victor_Takashi_Hayashi.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Victor Takashi Hayashi">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 1 · Robustez, Segurança e Adoção de IA · artigo curto</p>
+          <h2 class="cert__title">Adversarial Attacks as a Diagnostic Tool for a Mining Detection Network in the Brazilian Legal Amazon</h2>
+          <p class="cert__name">Victor Takashi Hayashi</p>
+          <p class="cert__authors">Leonardo Fajardo Grupioni; Gabriel Stephano Santos; Paulo Sérgio Cugnasca; Felipe Valencia de Almeida</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Adversarial_Attacks_Victor_Takashi_Hayashi.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Adversarial_Attacks_Victor_Takashi_Hayashi.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="ai, fill this form: a simple and effective data exfiltration attack on llm-based browser extensions without prompt injection victor garcia dos santos victor garcia dos santos; victor takashi hayashi; routo terada; bryan kano ferreira sessão 2 segurança de agentes de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_AI_Fill_Victor_Garcia_dos_Santos.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_AI_Fill_Victor_Garcia_dos_Santos.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Victor Garcia dos Santos">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 2 · Segurança de Agentes de IA · artigo completo</p>
+          <h2 class="cert__title">AI, Fill This Form: A Simple and Effective Data Exfiltration Attack on LLM-Based Browser Extensions Without Prompt Injection</h2>
+          <p class="cert__name">Victor Garcia dos Santos</p>
+          <p class="cert__authors">Victor Garcia dos Santos; Victor Takashi Hayashi; Routo Terada; Bryan Kano Ferreira</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_AI_Fill_Victor_Garcia_dos_Santos.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_AI_Fill_Victor_Garcia_dos_Santos.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="além da segurança do modelo: prontidão institucional para a adoção segura de inteligência artificial no setor público alessandro ribeiro alessandro ribeiro; maxwell sarmento carvalho; daniela de oliveira moraes sessão 1 robustez, segurança e adoção de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Alem_da_Alessandro_Ribeiro.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Alem_da_Alessandro_Ribeiro.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Alessandro Ribeiro">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 1 · Robustez, Segurança e Adoção de IA · artigo curto</p>
+          <h2 class="cert__title">Além da Segurança do Modelo: Prontidão Institucional para a Adoção Segura de Inteligência Artificial no Setor Público</h2>
+          <p class="cert__name">Alessandro Ribeiro</p>
+          <p class="cert__authors">Alessandro Ribeiro; Maxwell Sarmento Carvalho; Daniela de Oliveira Moraes</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Alem_da_Alessandro_Ribeiro.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Alem_da_Alessandro_Ribeiro.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="beyond attack success rate: representing consistency in evading the nids feature-space eduardo kugler viegas allan espindola; altair olivo santin; eduardo kugler viegas; pedro ferreira; antonio casimiro sessão 1 robustez, segurança e adoção de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Beyond_Attack_Eduardo_Kugler_Viegas.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Beyond_Attack_Eduardo_Kugler_Viegas.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Eduardo Kugler Viegas">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 1 · Robustez, Segurança e Adoção de IA · artigo completo</p>
+          <h2 class="cert__title">Beyond Attack Success Rate: Representing Consistency in Evading the NIDS Feature-Space</h2>
+          <p class="cert__name">Eduardo Kugler Viegas</p>
+          <p class="cert__authors">Allan Espindola; Altair Olivo Santin; Eduardo Kugler Viegas; Pedro Ferreira; Antonio Casimiro</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Beyond_Attack_Eduardo_Kugler_Viegas.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Beyond_Attack_Eduardo_Kugler_Viegas.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="beyond guardrails: tracing cross-layer evidence in local llm-agent execution larissa silva larissa silva; eduardo luzeiro feitosa; rafael castilho sessão 2 segurança de agentes de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Beyond_Guardrails_Larissa_Silva.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Beyond_Guardrails_Larissa_Silva.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Larissa Silva">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 2 · Segurança de Agentes de IA · artigo completo</p>
+          <h2 class="cert__title">Beyond Guardrails: Tracing Cross-Layer Evidence in Local LLM-Agent Execution</h2>
+          <p class="cert__name">Larissa Silva</p>
+          <p class="cert__authors">Larissa Silva; Eduardo Luzeiro Feitosa; Rafael Castilho</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Beyond_Guardrails_Larissa_Silva.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Beyond_Guardrails_Larissa_Silva.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="can llms explain ai? a study of explainable ai in cybersecurity machine learning models emanuel b. rodrigues elton freitas; beloin rodrigues; emanuel b. rodrigues; rossana maria de castro andrade; dario vieira; larisse lucas; oracio sessão 1 robustez, segurança e adoção de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Can_LLMs_Emanuel_B_Rodrigues.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Can_LLMs_Emanuel_B_Rodrigues.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Emanuel B. Rodrigues">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 1 · Robustez, Segurança e Adoção de IA · artigo completo</p>
+          <h2 class="cert__title">Can LLMs Explain AI? A Study of Explainable AI in Cybersecurity Machine Learning Models</h2>
+          <p class="cert__name">Emanuel B. Rodrigues</p>
+          <p class="cert__authors">Elton Freitas; Beloin Rodrigues; Emanuel B. Rodrigues; Rossana Maria de Castro Andrade; Dario Vieira; Larisse Lucas; Oracio</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Can_LLMs_Emanuel_B_Rodrigues.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Can_LLMs_Emanuel_B_Rodrigues.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="diferenciação de ataques em português e em inglês: análise de experimento sobre as barreiras linguísticas no alinhamento de llms victor takashi hayashi bruno ferreira; victor takashi hayashi sessão 3 segurança de llms: red teaming, robustez e prompt injection">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Diferenciacao_de_Victor_Takashi_Hayashi.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Diferenciacao_de_Victor_Takashi_Hayashi.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Victor Takashi Hayashi">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 3 · Segurança de LLMs: Red Teaming, Robustez e Prompt Injection · artigo curto</p>
+          <h2 class="cert__title">Diferenciação de Ataques em Português e em Inglês: Análise de Experimento sobre as Barreiras Linguísticas no Alinhamento de LLMs</h2>
+          <p class="cert__name">Victor Takashi Hayashi</p>
+          <p class="cert__authors">Bruno Ferreira; Victor Takashi Hayashi</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Diferenciacao_de_Victor_Takashi_Hayashi.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Diferenciacao_de_Victor_Takashi_Hayashi.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="evaluating the robustness of small language models in portuguese under red teaming with linguistic perturbations carlos bunn carlos bunn; matheus azevedo de sá; milton pagliuso; charles christian miers; marcos antonio simplicio jr sessão 3 segurança de llms: red teaming, robustez e prompt injection">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Evaluating_the_Carlos_Bunn.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Evaluating_the_Carlos_Bunn.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Carlos Bunn">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 3 · Segurança de LLMs: Red Teaming, Robustez e Prompt Injection · artigo completo</p>
+          <h2 class="cert__title">Evaluating the Robustness of Small Language Models in Portuguese under Red Teaming with Linguistic Perturbations</h2>
+          <p class="cert__name">Carlos Bunn</p>
+          <p class="cert__authors">Carlos Bunn; Matheus Azevedo de Sá; Milton Pagliuso; Charles Christian Miers; Marcos Antonio Simplicio Jr</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Evaluating_the_Carlos_Bunn.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Evaluating_the_Carlos_Bunn.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="from implicit trust to continuous verification: a position on the authorization of ai agents in production services rodrigo brandão mansilha diego santos de araujo; silvio quincozes; rodrigo brandão mansilha sessão 2 segurança de agentes de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_From_Implicit_Rodrigo_Brandao_Mansilha.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_From_Implicit_Rodrigo_Brandao_Mansilha.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Rodrigo Brandão Mansilha">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 2 · Segurança de Agentes de IA · artigo curto</p>
+          <h2 class="cert__title">From Implicit Trust to Continuous Verification: A Position on the Authorization of AI Agents in Production Services</h2>
+          <p class="cert__name">Rodrigo Brandão Mansilha</p>
+          <p class="cert__authors">Diego Santos de Araujo; Silvio Quincozes; Rodrigo Brandão Mansilha</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_From_Implicit_Rodrigo_Brandao_Mansilha.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_From_Implicit_Rodrigo_Brandao_Mansilha.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="jogos de sinalização para agentes de ia comprometidos lucila maria de souza bento lucila maria de souza bento; davidson boccardo sessão 2 segurança de agentes de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Jogos_de_Lucila_Maria_de_Souza_Bento.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Jogos_de_Lucila_Maria_de_Souza_Bento.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Lucila Maria de Souza Bento">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 2 · Segurança de Agentes de IA · artigo completo</p>
+          <h2 class="cert__title">Jogos de Sinalização para Agentes de IA Comprometidos</h2>
+          <p class="cert__name">Lucila Maria de Souza Bento</p>
+          <p class="cert__authors">Lucila Maria de Souza Bento; Davidson Boccardo</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Jogos_de_Lucila_Maria_de_Souza_Bento.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Jogos_de_Lucila_Maria_de_Souza_Bento.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="método reprodutível para avaliar a resiliência de agentes llm a ataques de injeção indireta de prompt marcos paulo pereira da silva marcos paulo pereira da silva; eric hans messias; joão gondim; laerte peotta sessão 2 segurança de agentes de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Metodo_Reprodutivel_Marcos_Paulo_Pereira_da_Silva.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Metodo_Reprodutivel_Marcos_Paulo_Pereira_da_Silva.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Marcos Paulo Pereira da Silva">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 2 · Segurança de Agentes de IA · artigo completo</p>
+          <h2 class="cert__title">Método Reprodutível para Avaliar a Resiliência de Agentes LLM a Ataques de Injeção Indireta de Prompt</h2>
+          <p class="cert__name">Marcos Paulo Pereira da Silva</p>
+          <p class="cert__authors">Marcos Paulo Pereira da Silva; Eric Hans Messias; João Gondim; Laerte Peotta</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Metodo_Reprodutivel_Marcos_Paulo_Pereira_da_Silva.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Metodo_Reprodutivel_Marcos_Paulo_Pereira_da_Silva.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="robustez de llms na detecção de vulnerabilidades em contratos inteligentes com transformações no código rafael alves rafael alves; marco amaral henriques sessão 1 robustez, segurança e adoção de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Robustez_de_Rafael_Alves.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Robustez_de_Rafael_Alves.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Rafael Alves">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 1 · Robustez, Segurança e Adoção de IA · artigo completo</p>
+          <h2 class="cert__title">Robustez de LLMs na Detecção de Vulnerabilidades em Contratos Inteligentes com Transformações no Código</h2>
+          <p class="cert__name">Rafael Alves</p>
+          <p class="cert__authors">Rafael Alves; Marco Amaral Henriques</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Robustez_de_Rafael_Alves.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Robustez_de_Rafael_Alves.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+      <li class="cert" data-busca="um framework metodológico para avaliação de segurança em código gerado por llms augusto césar graeml augusto césar graeml; thiago jesus; daniel pigatto; juliana de santi; ana cristina b. kochem vendramin sessão 1 robustez, segurança e adoção de ia">
+        <a class="cert__shot" href="certificados/pdf/WCIA2026_Certificado_Um_Framework_Augusto_Cesar_Graeml.pdf" target="_blank" rel="noopener">
+          <img src="certificados/thumbs/WCIA2026_Certificado_Um_Framework_Augusto_Cesar_Graeml.jpg" width="900" height="637" loading="lazy" decoding="async"
+               alt="Miniatura do certificado de Augusto César Graeml">
+        </a>
+        <div class="cert__body">
+          <p class="cert__meta">Sessão 1 · Robustez, Segurança e Adoção de IA · artigo completo</p>
+          <h2 class="cert__title">Um Framework Metodológico para Avaliação de Segurança em Código Gerado por LLMs</h2>
+          <p class="cert__name">Augusto César Graeml</p>
+          <p class="cert__authors">Augusto César Graeml; Thiago Jesus; Daniel Pigatto; Juliana de Santi; Ana Cristina B. Kochem Vendramin</p>
+          <p class="cert__actions">
+            <a class="cert__btn" href="certificados/pdf/WCIA2026_Certificado_Um_Framework_Augusto_Cesar_Graeml.pdf" download>Baixar o PDF</a>
+            <a class="cert__btn cert__btn--quiet" href="certificados/pdf/WCIA2026_Certificado_Um_Framework_Augusto_Cesar_Graeml.pdf" target="_blank" rel="noopener">Abrir em nova aba</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+
+    <p class="vazio" id="vazio" hidden>Nenhum certificado corresponde ao filtro.</p>
+
+  </div>
+
+</main>
+
+<script>
+/* Filtro no cliente: são poucos itens e todos já vieram no HTML, então basta
+   esconder o que não casa. Sem JavaScript, a lista completa continua de pé. */
+(function () {
+  var campo = document.getElementById('q');
+  var itens = Array.prototype.slice.call(document.querySelectorAll('#lista .cert'));
+  var contagem = document.getElementById('contagem');
+  var vazio = document.getElementById('vazio');
+
+  function normaliza(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  var indice = itens.map(function (li) { return normaliza(li.dataset.busca || ''); });
+
+  campo.addEventListener('input', function () {
+    var termos = normaliza(campo.value).split(/\s+/).filter(Boolean);
+    var visiveis = 0;
+
+    itens.forEach(function (li, i) {
+      var casa = termos.every(function (t) { return indice[i].indexOf(t) !== -1; });
+      li.hidden = !casa;
+      if (casa) visiveis++;
+    });
+
+    contagem.textContent = visiveis === 1 ? '1 certificado' : visiveis + ' certificados';
+    vazio.hidden = visiveis > 0;
+  });
+}());
+</script>
+
+</body>
+</html>
